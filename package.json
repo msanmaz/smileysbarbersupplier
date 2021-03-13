@@ -3,13 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build-css": "cross-env NODE_ENV=production tailwindcss build app.css -o styles.css",
+    "dev-css": "cross-env NODE_ENV=development tailwindcss build app.css -o styles.css",
+    "next-dev": "next dev",
+    "dev": "concurrently \"npm run next-dev\" \"npm run dev-css\"",
+    "next-build": "next build",
+    "build": "concurrently \"npm run next-build\" \"npm run build-css\"",
+    "start": "NODE_ENV=development node server.js"
   },
   "dependencies": {
+    "alpinejs": "^2.8.1",
+    "concurrently": "^6.0.0",
+    "cross-env": "^7.0.3",
+    "hamburger-react": "^2.4.0",
     "next": "10.0.8",
+    "postcss-flexbugs-fixes": "^5.0.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-icons": "^4.2.0",
+    "react-minimal-side-navigation": "^1.8.0",
+    "react-multi-carousel": "^2.6.2",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.0.3"
   }
 }

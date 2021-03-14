@@ -3,23 +3,19 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   purge: {
     enabled:true,
+    content:[ './components/**/*.js','./pages/**/*.js'],
     options:{safelist:["dark"]},
   },
   presets: [],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend:{
-      spacing:{
-        '97': '26rem',
-      },
+
       backgroundImage: theme => ({
         'smiley': "url('/smiley2bg.svg')",
         'hair': "url('/hair.jpeg')",
       }),
     
-    },
-    fontFamily:{
-      monteserrat:['Montserrat','sans-serif']
     },
     screens: {
       sm: '640px',
@@ -46,6 +42,7 @@ module.exports = {
     spacing: {
       px: '1px',
       0: '0px',
+      97: '26rem',
       0.5: '0.125rem',
       1: '0.25rem',
       1.5: '0.375rem',

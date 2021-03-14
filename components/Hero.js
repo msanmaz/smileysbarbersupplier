@@ -22,7 +22,6 @@ export default function Hero() {
     };
 
     return (
-        <>
             <div className="relative pt-20 pb-32" style={{
                 minHeight: "65vh"
             }}>
@@ -93,6 +92,5 @@ export default function Hero() {
 
             </div>
 
-        </>
     )
 }

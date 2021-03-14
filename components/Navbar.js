@@ -2,13 +2,15 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link'
 import Hamburger from 'hamburger-react'
-import Dropdown from './Dropdown';
+import Dropdown from './Dropdown'
+
 
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
     React.useLayoutEffect = React.useEffect
+
 
 
     return (
@@ -132,6 +134,7 @@ export default function Navbar() {
                     </a>
                 </div>
 
+ 
 
 
 
@@ -214,8 +217,10 @@ export default function Navbar() {
             </div>
 
 
-            <div className="w-full bg-white">
-                            <Dropdown color="white"/>
+            <div className="w-full bg-white flex-wrap flex">
+                            <Dropdown  category="Brands" cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totext" cat7="Permasharp"/>
+                            <Dropdown  category="Hair Care" cat1="Hair Tonic" cat2="Hair Spray" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo"/>
+
 
                 </div>
            

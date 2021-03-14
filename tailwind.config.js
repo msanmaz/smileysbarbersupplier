@@ -4,7 +4,6 @@ module.exports = {
   purge: {
     enabled:true,
     content:[ './components/**/*.js','./pages/**/*.js'],
-    options:{safelist:["dark"]},
   },
   presets: [],
   darkMode: 'class', // or 'media' or 'class'

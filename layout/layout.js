@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 export default function Layout({ children }) {
     return (
 
-        <div className="dark:bg-black bg-white">
+        <body className="">
             <Head>
                 <title>Smileys Barber Supplier</title>
             </Head>
@@ -16,8 +16,8 @@ export default function Layout({ children }) {
 
             {children}
 
-<Footer/>
-        </div>
+            <Footer/>
+        </body>
 
     )
 }

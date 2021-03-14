@@ -22,7 +22,7 @@ export default function Navbar() {
 
     return (
         <div className="fixed z-50 w-full">
-        <div className={` w-full z-50 px-6 flex items-center lg:py-0 py-2 bg-navside`}>
+        <div className={` w-full z-50 px-6 flex items-center lg:py-0 py-2 bg-black`}>
                 <div className="flex my-4">
                     <Link href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-20 animate" version="1.2" viewBox="0 0 375 375">

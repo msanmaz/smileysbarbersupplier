@@ -11,9 +11,12 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'smiley': "url('/smiley2bg.svg')",
-        //'waves': "url('/waves.jpg')"
+        'hair': "url('/hair.jpeg')",
       }),
     
+    },
+    fontFamily:{
+      monteserrat:['Montserrat','sans-serif']
     },
     screens: {
       sm: '640px',
@@ -362,8 +365,11 @@ module.exports = {
       '3/6': '50%',
       '4/6': '66.666667%',
       '5/6': '83.333333%',
+      '295':'295px',
       full: '100%',
-      screen: '100vh',
+      tam:'295px',
+      half:'595px',
+      screen: '200px',
     }),
     inset: (theme, { negative }) => ({
       auto: 'auto',
@@ -691,7 +697,7 @@ module.exports = {
       '2/3': '59.666667%',
       '1/4': '25%',
       '2/4': '50%',
-      '3/4': '75%',
+      '3/4': '70%',
       '1/5': '20%',
       '2/5': '40%',
       '3/5': '60%',
@@ -712,7 +718,7 @@ module.exports = {
       '7/12': '58.333333%',
       '8/12': '66.666667%',
       '9/12': '75%',
-      '10/12': '83.333333%',
+      '10/12': '295px',
       '11/12': '91.666667%',
       full: '100%',
       screen: '100vw',

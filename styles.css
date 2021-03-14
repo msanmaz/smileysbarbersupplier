@@ -770,10 +770,6 @@ video {
   height: 1rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -1205,16 +1201,8 @@ video {
   width: 1rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
 .w-8 {
   width: 2rem;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .w-20 {

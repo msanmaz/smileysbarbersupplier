@@ -10,14 +10,6 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
     React.useLayoutEffect = React.useEffect
-    const toggleButton = useCallback(
-        () => setIsOpen(prevState => !prevState),
-        [],
-    )
-    const showme = useCallback(
-        () => setShowMenu(prevState => !prevState),
-        [],
-    )
 
 
     return (

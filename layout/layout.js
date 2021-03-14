@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 export default function Layout({ children }) {
     return (
 
-        <div className="bg-white dark:bg-navside">
+        <div className="dark:bg-black bg-white">
             <Head>
                 <title>Smileys Barber Supplier</title>
             </Head>

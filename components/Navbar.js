@@ -1,8 +1,9 @@
 
 import React, { useCallback, useState } from 'react';
-import useDarkMode from '../hook/Usedarkmode';
+import useDarkMode from '../hook/useDarkMode';
 import Link from 'next/link'
 import Hamburger from 'hamburger-react'
+import Dropdown from './Dropdown';
 
 
 export default function Navbar() {
@@ -229,20 +230,7 @@ export default function Navbar() {
 
 
             <div className="w-full bg-white">
-                    <ul className="mx-10">
-                        <li className="inline-block px-4 text-lg">
-                            Brands
-                        </li>
-                        <li className="inline-block px-4 text-lg">
-                            Brands
-                        </li>
-                        <li className="inline-block px-4 text-lg ">
-                            Brands
-                        </li>
-                        <li className="inline-block px-4 text-lg">
-                            Brands
-                        </li>
-                    </ul>
+                            <Dropdown color="white"/>
 
                 </div>
            

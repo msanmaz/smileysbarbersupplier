@@ -1,6 +1,6 @@
 
 
-export default function Card(){
+export default function Card(props) {
     return(
         <>
 <div class="md:px-2 md:mx-auto ml-7 mb-3">
@@ -11,7 +11,7 @@ export default function Card(){
     <div class="col-span-3 row-span-4 p-1 m-1 bg-gray-100">
       <a href="#">
         <img
-          src="/totexspray.png"
+          src={props.gorsel}
           alt="Placeholder"
           class="rounded-t-xl object-cover h-full w-full shadow-sm"
         />
@@ -26,7 +26,7 @@ export default function Card(){
             href="#"
           >
 
-            <span class="ml-2 text-sm"> Totex </span>
+            <span class="ml-2 text-sm"> {props.brand} </span>
           </a>
         </div>
       </div>
@@ -38,10 +38,10 @@ export default function Card(){
       >
         <h1 class="text-lg animate1">
           <a class=" text-black font-sans text-2xl" href="#">
-          Hair Gel
+          {props.nam}
           </a>
         </h1>
-        <p class="text-grey-darker text-sm">110g</p>
+        <p class="text-grey-darker text-sm">{props.volume}</p>
       </header>
     </div>
 
@@ -59,3 +59,6 @@ export default function Card(){
 
         </>
     )}
+
+
+

@@ -25,14 +25,14 @@ export default function Categories() {
                         <div className="flex  flex-wrap flex-1 min-w-full">
 
                             <div className="md:w-1/2 w-full flex p-4 items-stretch h-tam">
-                                <div className="bg-hair bg-cover bg-center flex relative w-full rounded-lg"></div>
+                                <div className="bg-razor bg-cover bg-center flex relative w-full rounded-lg"></div>
                             </div>
                             <div className="md:w-1/2 w-full flex p-4 items-stretch h-tam">
-                                <div className="bg-hair bg-cover bg-center flex relative w-full rounded-lg"></div>
+                                <div className="bg-razor1 bg-cover bg-center flex relative w-full rounded-lg"></div>
                             </div>
 
                             <div className="md:w-1/3 w-full flex p-4 items-stretch" style={{ height: '333px' }}>
-                                <div className="bg-hair bg-cover bg-center flex relative w-full rounded-lg"></div>
+                                <div className="bg-shave bg-cover bg-center flex relative w-full rounded-lg"></div>
                             </div>
                             <div className="md:w-1/3 w-full flex p-4 items-stretch" style={{ height: '333px' }}>
                                 <div className="bg-hair bg-cover bg-center flex relative w-full rounded-lg"></div>

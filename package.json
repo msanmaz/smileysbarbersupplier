@@ -15,6 +15,7 @@
     "alpinejs": "^2.8.1",
     "concurrently": "^6.0.0",
     "cross-env": "^7.0.3",
+    "firebase": "^8.3.0",
     "hamburger-react": "^2.4.0",
     "next": "10.0.8",
     "next-themes": "^0.0.12",

@@ -13,6 +13,9 @@ module.exports = {
       backgroundImage: theme => ({
         'smiley': "url('/smiley2bg.svg')",
         'hair': "url('/hair.jpeg')",
+        'razor': "url('/category1.1.jpeg')",
+        'razor1': "url('/category1.jpeg')",
+        'shave': "url('/category2.jpeg')",
       }),
     
     },
@@ -760,7 +763,7 @@ module.exports = {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
     backgroundClip: ['responsive'],
-    backgroundColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
+    backgroundColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus','active'],
     backgroundImage: ['responsive'],
     backgroundOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
     backgroundPosition: ['responsive'],

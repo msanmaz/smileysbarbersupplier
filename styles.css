@@ -593,12 +593,29 @@ video {
   background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
 }
 
+.active\:bg-gray-900:active {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .bg-hair {
   background-image: url('/hair.jpeg');
+}
+
+.bg-razor {
+  background-image: url('/category1.1.jpeg');
+}
+
+.bg-razor1 {
+  background-image: url('/category1.jpeg');
+}
+
+.bg-shave {
+  background-image: url('/category2.jpeg');
 }
 
 .from-purple-400 {
@@ -1518,6 +1535,11 @@ video {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   --tw-translate-y: -0.25rem;
+}
+
+.buttonactive{
+  --tw-bg-opacity: 1;
+  background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {

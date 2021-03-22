@@ -52,7 +52,7 @@ useEffect(()=>{
       {loading ? "Loading Component Will be gone in 2 sec" :
            <div className="flex flex-wrap">
             {products.map(product=>
-              <Card gorsel={product.img} brand={product.brand} volume={product.volume} nam={product.name}/>
+              <Card gorsel={product.img} key={product.id} brand={product.brand} volume={product.volume} nam={product.name}/>
               )}
 
            </div>

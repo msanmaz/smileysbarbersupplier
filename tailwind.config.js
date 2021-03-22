@@ -14,6 +14,8 @@ module.exports = {
         'smiley': "url('/smiley2bg.svg')",
         'hair': "url('/hair.jpeg')",
         'razor': "url('/category1.1.jpeg')",
+        'products': "url('/raza.jpeg')",
+        'productsbg': "url('/productsbg.jpeg')",
         'razor1': "url('/category1.jpeg')",
         'shave': "url('/category2.jpeg')",
       }),
@@ -79,6 +81,7 @@ module.exports = {
       80: '20rem',
       96: '24rem',
       30: '25rem',
+      55:'30rem',
     },
     animation: {
       none: 'none',
@@ -371,6 +374,7 @@ module.exports = {
       full: '100%',
       tam:'295px',
       half:'595px',
+      cate:'333px',
       screen: '200px',
     }),
     inset: (theme, { negative }) => ({

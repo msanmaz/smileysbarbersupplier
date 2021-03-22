@@ -26,6 +26,7 @@
     "react-icons": "^4.2.0",
     "react-minimal-side-navigation": "^1.8.0",
     "react-multi-carousel": "^2.6.2",
+    "react-select": "^4.3.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

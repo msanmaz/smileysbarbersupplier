@@ -23,16 +23,16 @@ export default function Hero() {
 
     return (
             <div className="relative pt-20 pb-32" style={{
-                minHeight: "65vh"
+                minHeight: "75vh"
             }}>
-                <div className="absolute top-36 w-full h-full bg-center bg-cover"
+                <div className="absolute w-full h-full bg-center bg-cover"
                     style={{
                         backgroundImage: "url('/smiley2bg.svg')"
                     }}>
 
 
 
-<div className="relative md:top-9 w-full top-20 md:w-2/3 float-right">
+<div className="relative md:top-32 w-full top-20 md:w-2/3 float-right">
                         <Carousel
                             additionalTransfrom={0}
                             showDots={false}
@@ -70,12 +70,12 @@ export default function Hero() {
 
                     </div>
 
-                    <div className="flex w-full md:w-2/6 mt-20 px-2 md:mx-10 float-left">
+                    <div className="flex w-full md:w-2/6 md:mt-44 mt-16 px-2 md:mx-10 float-left">
                         <div className="flex w-full flex-col">
                             <h1 className="font-extrabold font-sans text-5xl dark:text-white text-black">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-red-500">BARBER</span> SUPPLIER</h1>
                             <p className="font-medium font-sans text-2xl dark:text-white text-black"> Made by Barbers, Made to work</p>
                             <p className="font=medium font-sans text-xl dark:text-white text-black">For professional barber and personal care products</p>
-                            <button class="py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+                            <button className="py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
                                 Discover Our Collection
 </button>
                         </div>

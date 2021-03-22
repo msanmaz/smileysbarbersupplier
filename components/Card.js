@@ -3,50 +3,50 @@
 export default function Card(props) {
     return(
         <>
-<div class="md:px-2 md:mx-auto ml-7 mb-3">
-  <div class="md:w-72 w-36 m-auto ">
+<div className="md:px-2 md:mx-auto ml-7 mb-3">
+  <div className="md:w-72 w-36 m-auto ">
       <div
-    class="grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+    className="grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
   >
-    <div class="col-span-3 row-span-4 p-1 m-1 bg-gray-100">
+    <div className="col-span-3 row-span-4 p-1 m-1 bg-gray-100">
       <a href="#">
         <img
           src={props.gorsel}
           alt="Placeholder"
-          class="rounded-t-xl object-cover h-full w-full shadow-sm"
+          className="rounded-t-xl object-cover h-full w-full shadow-sm"
         />
       </a>
     </div>
 
-    <div class="col-span-3 row-span-1">
-      <div class="flex align-bottom flex-col leading-none p-2 md:p-4">
-        <div class="flex flex-row justify-between items-center">
+    <div className="col-span-3 row-span-1">
+      <div className="flex align-bottom flex-col leading-none p-2 md:p-4">
+        <div className="flex flex-row justify-between items-center">
           <a
-            class="flex items-center no-underline hover:underline text-black"
+            className="flex items-center no-underline hover:underline text-black"
             href="#"
           >
 
-            <span class="ml-2 text-sm"> {props.brand} </span>
+            <span className="ml-2 text-sm"> {props.brand} </span>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="col-span-3 row-span-1">
+    <div className="col-span-3 row-span-1">
       <header
-        class="flex items-center justify-between leading-tight p-2 md:p-4"
+        className="flex items-center justify-between leading-tight p-2 md:p-4"
       >
-        <h1 class="text-lg animate1">
-          <a class=" text-black font-sans text-2xl" href="#">
+        <h1 className="text-lg animate1">
+          <a className=" text-black font-sans text-2xl" href="#">
           {props.nam}
           </a>
         </h1>
-        <p class="text-grey-darker text-sm">{props.volume}</p>
+        <p className="text-grey-darker text-sm">{props.volume}</p>
       </header>
     </div>
 
-    <div class="col-span-3 row-span-1">
-     <div class="px-4 my-2">€ --,--</div>
+    <div className="col-span-3 row-span-1">
+     <div className="px-4 my-2">€ --,--</div>
      <div className="flex flex-wrap float-right px-4 ">
          <p className="font-semibold font-mono">Category</p>
      </div>

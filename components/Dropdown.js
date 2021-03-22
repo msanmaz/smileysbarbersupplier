@@ -120,6 +120,14 @@ const Dropdown = ( props ) => {
                 >
                   {props.cat7}
                 </a>
+                <a
+                  href={props.url}
+                  className={
+                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1 text-gray-800" 
+                  }
+                >
+                  {props.cat8}
+                </a>
   
               </div>
             </div>
@@ -132,11 +140,11 @@ const Dropdown = ( props ) => {
     return (
       <>
         <div className="flex flex-wrap w-min">
-          <div className="px-4">
+          <div className="px-2">
             <div className="relative inline-flex align-middle">
               <button
                 className={
-                  "text-black flex font-semibold uppercase text-xs md:text-sm px-6 py-3 rounded  outline-none focus:outline-none mb-1 "
+                  "text-black flex font-semibold uppercase text-xs md:text-sm  py-3 rounded  outline-none focus:outline-none mb-1 "
                 }
                 style={{ transition: "all .15s ease" }}
                 type="button"
@@ -213,15 +221,18 @@ const Dropdown = ( props ) => {
                 >
                   {props.cat5}
                 </a>
+
+                
                 <a
-                  href="#pablo"
+                  href="/Barbering"
                   className={
                     "text-xs md:text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1  text-gray-800" 
                   }
-                  onClick={e => e.preventDefault()}
+                  
                 >
                   {props.cat6}
                 </a>
+
                 
 
               </div>

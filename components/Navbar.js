@@ -15,10 +15,10 @@ export default function Navbar() {
 
     return (
         <div className="fixed z-50 w-full">
-        <div className={` w-full z-50 px-6 flex items-center lg:py-0 py-2 bg-black`}>
+        <div className={` w-full px-6 flex items-center lg:py-0 py-2 bg-black`}>
                 <div className="flex my-4">
                     <Link href="/">
-                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-20 animate" version="1.2" viewBox="0 0 375 375">
+                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-20 animate md:flex hidden" version="1.2" viewBox="0 0 375 375">
                             <defs />
                             <defs>
                                 <symbol id="a" overflow="visible">
@@ -77,7 +77,7 @@ export default function Navbar() {
                             <use x="190.721" y="196.001" fill="#fff" href="#d" />
                             <use x="209.033" y="196.001" fill="#fff" href="#e" />
                             <use x="228.08" y="196.001" fill="#fff" href="#f" />
-                            <g clip-path="url(#g)">
+                            <g clipPath="url(#g)">
                                 <path fill="#fff" d="M257.563 137.559c-3.29 14.601-26.11 8.765-32.434 3.492-9.14-7.64-7.324-16.535-21.54-18.5-8.515-1.184-13.741 3.308-16.089 9.047-2.348-5.707-7.605-10.2-16.09-9.047-14.215 1.965-12.367 10.86-21.539 18.5-6.324 5.304-29.176 11.11-32.434-3.492-1.124-5.024-5.007-3.621-4.066-.875 7.887 23.46 42.293 24.367 54.125 22.59 8.953-1.376 16.844-7.583 20.004-14.258 3.16 6.644 11.05 12.882 20.004 14.257 11.863 1.809 46.238.903 54.125-22.59.91-2.745-2.942-4.148-4.067.876zm0 0" />
                             </g>
                             <use x="142.844" y="227.364" fill="#fff" href="#h" />
@@ -98,11 +98,11 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                <div class="justify-center pt-2 relative mx-auto text-gray-600 hidden md:flex">
-                    <input class="border-2 border-gray-300 bg-white h-10 px-5 md:pr-56 pr-0 rounded-lg text-sm focus:outline-none"
+                <div className="justify-center pt-2 relative mx-auto text-gray-600 hidden md:flex">
+                    <input className="border-2 border-gray-300 bg-white h-10 px-5 md:pr-56 pr-0 rounded-lg text-sm focus:outline-none"
                         type="search" name="search" placeholder="Search" />
-                    <button type="submit" class="absolute left-97 top-0 mt-5">
-                        <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    <button type="submit" className="absolute left-97 top-0 mt-5">
+                        <svg className="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                             xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
                             viewBox="0 0 56.966 56.966" style={{ enableBackground: "new 0 0 56.966 56.966" }}
                             width="512px" height="512px">
@@ -150,7 +150,7 @@ export default function Navbar() {
 
                 <nav>
                     <aside
-                        className={`transform top-0 right-0 w-64 bg-navside fixed h-full overflow-auto ease-in-out rounded-l-xl transition-all duration-300 z-30"
+                        className={`transform top-0 z-50 right-0 w-64 bg-navside fixed h-full overflow-auto ease-in-out rounded-l-xl transition-all duration-300 z-30"
                                     ${isOpen ? 'translate-x-0 visible' : 'translate-x-full invisible'}`}>
                         <ul className="items-center justify-between text-base text-white pt-4 mt-14 ml-20 lg:pt-0">
                             <li><a className="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-white" href="/">Home Page</a></li>
@@ -217,11 +217,11 @@ export default function Navbar() {
             </div>
 
 
-            <div className="w-full bg-white flex-wrap flex">
-                            <Dropdown  category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totext" cat7="Permasharp"/>
-                            <Dropdown  category={`Hair&Care`} cat1="Hair Tonic" cat2="Hair Spray" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo"/>
-                            <Dropdown  category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat6="Shaving Gel" cat7="Blood Matches"/>
-                            <Dropdown  category={`Barbering`} cat1="Electrical" cat2="Scissors" cat3={`Capes&Jackets`} cat4="Aprons" cat4="Hygiene" cat5="Water Sprays"/>
+            <div className="w-full bg-white flex-wrap  space-x-4 flex">
+                            <Dropdown  category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totext" cat7="Permasharp" cat8="All Brands" url="/brands"/>
+                            <Dropdown  category={`Hair&Care`} cat1="Hair Tonic" cat2="Hair Spray" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo" cat8="All Hair&Care" url="/haircare"/>
+                            <Dropdown  category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat6="Shaving Gel" cat7="Blood Matches" cat8="All Beard&Shave" url="/beardshave"/>
+                            <Dropdown  category={`Barbering`} cat1="Electrical" cat2="Scissors" cat3={`Capes&Jackets`} cat4="Aprons" cat4="Hygiene" cat5="Water Sprays" cat6="All"/>
 
 
 

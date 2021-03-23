@@ -1,5 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Link from 'next/link'
 
 export default function Hero() {
     const responsive = {
@@ -75,9 +76,12 @@ export default function Hero() {
                             <h1 className="font-extrabold font-sans text-5xl dark:text-white text-black">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-red-500">BARBER</span> SUPPLIER</h1>
                             <p className="font-medium font-sans text-2xl dark:text-white text-black"> Made by Barbers, Made to work</p>
                             <p className="font=medium font-sans text-xl dark:text-white text-black">For professional barber and personal care products</p>
-                            <button className="py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            <Link href="/products">
+            <button className="py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
                                 Discover Our Collection
-</button>
+</button>      
+            </Link>
+
                         </div>
                     </div>
 

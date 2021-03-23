@@ -37,7 +37,7 @@ export default function Card(props) {
         className="flex items-center justify-between leading-tight p-2 md:p-4"
       >
         <h1 className="text-lg animate1">
-          <a className=" text-black font-sans text-2xl" href="#">
+          <a className=" text-black font-sans md:text-2xl text-lg" href="#">
           {props.nam}
           </a>
         </h1>

@@ -1,5 +1,6 @@
 import React from "react";
 import Popper from "popper.js";
+import Link from 'next/link';
 
 const Dropdown = ( props ) => {
   // dropdown props
@@ -15,6 +16,7 @@ const Dropdown = ( props ) => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+
 
   if(props.cat7){
     return (
@@ -55,16 +57,12 @@ const Dropdown = ( props ) => {
                 closeDropdownPopover();
             }}
               >
-                <a
-                  href="#pablo"
-                  className={
-                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg " 
-                    
-                  }
+                <Link
+                  href={props.url}
                   onClick={e => e.preventDefault()}
-                >
+                   >
                   {props.cat1}
-                </a>
+                </Link>
                 <a
                   href="#pablo"
                   className={

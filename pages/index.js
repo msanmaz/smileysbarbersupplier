@@ -19,7 +19,7 @@ export default function Home() {
     setTimeout(() => {
       let firebase = loadDB();
       firebase.firestore()
-        .collection("newest")
+        .collection("hair")
         .where('type', '==', `${aim}`)
         .onSnapshot(snap => {
           const desc = snap.docs.map(doc => ({
@@ -51,11 +51,11 @@ export default function Home() {
 
       </div>
       {loading ? "Loading Component Will be gone in 2 sec" :
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap pl-12">
           {products.map(product =>
             <Link href="/products/[id]" as={'/products/' + product.id}>
               <div className="md:px-6 px-auto pr-6">
-                <Card gorsel={product.img} key={product.id} brand={product.brand} volume={product.volume} nam={product.name} />
+                <Card gorsel={product.img} key={product.id} brand={product.brand} cat={product.cat} volume={product.volume} nam={product.name} />
 
               </div>
 

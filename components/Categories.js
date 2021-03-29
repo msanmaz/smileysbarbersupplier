@@ -3,7 +3,7 @@ export default function Categories() {
 
     return (
         <>
-            <div className="relative mt-56 md:mt-36 mb-20">
+            <div className="relative mt-56 md:mt-28 mb-20">
                 <h2 className="text-3xl font-bold flex justify-center text-black dark:text-white">Products</h2>
 
 

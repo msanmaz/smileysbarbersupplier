@@ -913,8 +913,8 @@ video {
   line-height: 2.25rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -956,6 +956,11 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .mx-auto {
@@ -1013,6 +1018,10 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .ml-12 {
@@ -1176,6 +1185,10 @@ video {
 
 .pr-12 {
   padding-right: 3rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
 }
 
 .pt-20 {
@@ -1732,8 +1745,8 @@ video {
     margin-left: 1rem;
   }
 
-  .md\:mt-36 {
-    margin-top: 9rem;
+  .md\:mt-28 {
+    margin-top: 7rem;
   }
 
   .md\:mt-44 {

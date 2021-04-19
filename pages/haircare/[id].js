@@ -9,7 +9,7 @@ const HairProducts = (props) => {
             <div className="w-full pt-24 flex">
 
 
-                <div className="w-2/5 flex">
+                <div className="md:w-2/5 w-1/2 flex">
 
 
                     <div className="md:my-24 my-16">
@@ -35,9 +35,9 @@ const HairProducts = (props) => {
 
                     </div>
                 </div>
-                <div className="w-3/5 flex md:mt-52 mt-16">
+                <div className="md:w-3/5 w-1/2 flex md:mt-52 mt-16">
 
-                    <div className="w-5/6">
+                    <div className="md:w-5/6 w-full">
 
 
                         <div className="px-4 flex py-4 text-xm"> {props.cat}</div>

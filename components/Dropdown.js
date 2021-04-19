@@ -2,11 +2,12 @@ import React from "react";
 import Popper from "popper.js";
 import Link from 'next/link';
 
-const Dropdown = ( props ) => {
+const Dropdown = (props) => {
   // dropdown props
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
   const btnDropdownRef = React.createRef();
   const popoverDropdownRef = React.createRef();
+
   const openDropdownPopover = () => {
     new Popper(btnDropdownRef.current, popoverDropdownRef.current, {
       placement: "bottom-start"
@@ -16,7 +17,9 @@ const Dropdown = ( props ) => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
-
+  const handleClick = (event) => {
+    console.log(event.target.name);
+  };
 
   if(props.cat7){
     return (
@@ -26,7 +29,7 @@ const Dropdown = ( props ) => {
             <div className="relative inline-flex align-middle">
               <button
                 className={
-                  "text-black flex font-semibold uppercase  text-xs md:text-sm md:px-3 py-3 rounded  outline-none focus:outline-none mb-1 "
+                  "hover:text-green-500 font-semibold text-black flex uppercase  text-xs md:text-xs md:px-3 py-3 rounded  outline-none focus:outline-none mb-1 "
                 }
                 style={{ transition: "all .15s ease" }}
                 type="button"
@@ -39,7 +42,6 @@ const Dropdown = ( props ) => {
               }}
               >
                   {props.category}
-                              <img src="/down-chevron.svg" className="md:h-4 md:w-4 w-2 h-2 ml-0.5 fill-current text-black"/>
   
               </button>
               <div
@@ -57,12 +59,17 @@ const Dropdown = ( props ) => {
                 closeDropdownPopover();
             }}
               >
-                <Link
-                  href={props.url}
+    
+    <Link
+                  href={`/${props.url}/?cat=${props.cat1}`} as={`/${props.url}/${props.cat1}`}
+                  className={
+                    "hover:text-green-500 md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg" 
+                  }
                   onClick={e => e.preventDefault()}
-                   >
+                >
                   {props.cat1}
                 </Link>
+
                 <a
                   href="#pablo"
                   className={
@@ -118,15 +125,16 @@ const Dropdown = ( props ) => {
                 >
                   {props.cat7}
                 </a>
-                <a
-                  href={props.url}
+                <Link
+                  href={`${props.url}`}
                   className={
-                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1 text-gray-800" 
+                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg" 
                   }
+                  onClick={e => e.preventDefault()}
                 >
                   {props.cat8}
-                </a>
-  
+                </Link>
+
               </div>
             </div>
           </div>
@@ -142,7 +150,7 @@ const Dropdown = ( props ) => {
             <div className="relative inline-flex align-middle">
               <button
                 className={
-                  "text-black flex font-semibold uppercase text-xs md:text-sm  py-3 rounded  outline-none focus:outline-none mb-1 "
+                  "text-black font-semibold flex uppercase text-xs md:text-xs hover:text-green-500  py-3 rounded  outline-none focus:outline-none mb-1 "
                 }
                 style={{ transition: "all .15s ease" }}
                 type="button"
@@ -155,7 +163,6 @@ const Dropdown = ( props ) => {
               }}
               >
                   {props.category}
-                              <img src="/down-chevron.svg" className="md:h-4 md:w-4 h-2 w-4 ml-0.5 fill-current text-black"/>
   
               </button>
               <div
@@ -176,7 +183,7 @@ const Dropdown = ( props ) => {
                 <a
                   href="#pablo"
                   className={
-                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg " 
+                    "hover:text-green-600 md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg " 
                     
                   }
                   onClick={e => e.preventDefault()}

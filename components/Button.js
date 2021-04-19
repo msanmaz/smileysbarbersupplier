@@ -12,7 +12,7 @@ const Button = ({buttons,doSomethingAfterClick}) => {
             {buttons.map((buttonLabel,i) =>
                         <button key={i} name={buttonLabel} 
                         onClick={(event) => handleClick(event, i)} 
-                        className={i === clickedId ? "buttonactive py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" : "py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"}>
+                        className={i === clickedId ? "buttonactive py-2 md:px-4 px-2 bg-green-500 text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" : "py-2 md:px-4 px-2 bg-green-500 text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"}>
                         {buttonLabel}
                     </button>
         

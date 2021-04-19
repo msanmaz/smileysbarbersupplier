@@ -3,11 +3,11 @@ export default function Categories() {
 
     return (
         <>
-            <div className="relative mt-56 md:mt-28 mb-20">
-                <h2 className="text-3xl font-bold flex justify-center text-black dark:text-white">Products</h2>
+            <div className="relative mt-8 md:mt-28 mb-20">
+                <h2 className="md:text-3xl text-2xl font-bold flex justify-center text-black dark:text-white">Products</h2>
 
 
-                <div className="flex flex-wrap md:flex-nowrap flex-1 min-w-full" data-aos-id-blocks>
+                <div className="flex flex-wrap md:flex-nowrap flex-1 min-w-full px-4" data-aos-id-blocks>
 
                     <div className="md:w-3/0 w-full  flex items-stretch grid-1">
                         <div className="flex flex-nowrap md:flex-wrap flex-1 p-4">

@@ -51,7 +51,7 @@ export default function Home() {
 
       </div>
       {loading ? "Loading Component Will be gone in 2 sec" :
-        <div className="flex flex-wrap pl-12">
+        <div className="flex flex-wrap md:ml-12">
           {products.map(product =>
             <Link href="/products/[id]" as={'/products/' + product.id}>
               <div className="md:px-6 px-auto pr-6">

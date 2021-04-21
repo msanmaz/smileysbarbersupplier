@@ -1,24 +1,24 @@
-import { loadDB } from '../../config/firebase'
-import Layout from '../../layout/layout'
+import { loadDB } from '../../../../config/firebase'
+import Layout from '../../../../layout/layout'
 import Image from 'next/image'
 import Link from 'next/link'
 const HairProducts = (props) => {
 
     return (
         <>
-            <div className="w-full pt-24 flex">
+            <div className="w-full md:mx-10 pt-10 flex flex-wrap md:flex-nowrap">
 
 
-                <div className="md:w-2/5 w-1/2 flex">
+                <div className="md:w-2/5 w-full flex">
 
 
-                    <div className="md:my-24 my-16">
+                    <div className="md:my-24 mx-10 my-4">
 
                         <div className="w-full">
                             <Link href={`/haircare/?cat=${props.cat}`} as={`/haircare/${props.cat}`}
                             >
                                 <div
-                                    class="p-4 w-1/4 cursor-pointer">
+                                    class="p-4 w-1/4 pt-20 cursor-pointer">
                                     <h3 class="text-lg font-semibold inline-flex">
                                         <svg class="mr-2" width="24" height="30" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -35,13 +35,13 @@ const HairProducts = (props) => {
 
                     </div>
                 </div>
-                <div className="md:w-3/5 w-1/2 flex md:mt-52 mt-16">
+                <div className="md:w-3/5 w-full mx-10 flex md:mt-52">
 
                     <div className="md:w-5/6 w-full">
 
 
-                        <div className="px-4 flex py-4 text-xm"> {props.cat}</div>
-                        <div className="px-4 font-semibold text-base md:text-3xl">{props.name}</div>
+                        <div className="px-4 flex py-4 text-xl"> {props.cat}</div>
+                        <div className="px-4 font-semibold text-xl">{props.name}</div>
                         <div className="md:float-right px-4 py-4">
                             <button className="py-2 md:px-6 px-4 bg-red-500 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Price Enquiry </button>
                         </div>
@@ -85,9 +85,9 @@ const HairProducts = (props) => {
                 </div>
             </div>
 
-            <div className="flex w-full">
+            <div className="flex flex-wrap w-full">
 
-                <div className="flex flex-wrap justify-center w-1/2">
+                <div className="flex flex-wrap justify-center w-full md:w-1/2">
 
                     <div className="flex font-semibold text-2xl px-4">
                         Product Information
@@ -107,7 +107,7 @@ const HairProducts = (props) => {
                 </div>
 
 
-                <div className="flex justify-center w-1/2">
+                <div className="flex justify-center w-full md:w-1/2">
                     <div className="font-semibold text-2xl">
                         Related Products
                 </div>

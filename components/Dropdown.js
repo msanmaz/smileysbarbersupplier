@@ -61,24 +61,23 @@ const Dropdown = (props) => {
               >
     
     <Link
-                  href={`/${props.url}/?cat=${props.cat1}`} as={`/${props.url}/${props.cat1}`}
-                  className={
-                    "hover:text-green-500 md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg" 
-                  }
-                  onClick={e => e.preventDefault()}
-                >
-                  {props.cat1}
-                </Link>
+                  href={`/${props.url}/${props.cat1url}`} as={`/${props.url}/${props.cat1url}`}
 
-                <a
-                  href="#pablo"
-                  className={
-                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg" 
-                  }
                   onClick={e => e.preventDefault()}
                 >
+                  <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
+                  {props.cat1}
+                  </div>
+                </Link>
+                <Link
+                  href={`/${props.url}/${props.cat2url}`} as={`/${props.url}/${props.cat2url}`}
+
+                  onClick={e => e.preventDefault()}
+                >
+                  <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
                   {props.cat2}
-                </a>
+                  </div>
+                </Link>
                 <a
                   href="#pablo"
                   className={
@@ -126,13 +125,13 @@ const Dropdown = (props) => {
                   {props.cat7}
                 </a>
                 <Link
-                  href={`${props.url}`}
-                  className={
-                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg" 
-                  }
+                  href={`/${props.url}`} as={`/${props.url}`}
+
                   onClick={e => e.preventDefault()}
                 >
+                  <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
                   {props.cat8}
+                  </div>
                 </Link>
 
               </div>

@@ -1,9 +1,9 @@
 import { React, useState,useEffect } from 'react'
-import Button from '../../components/Button' 
-import Layout from '../../layout/layout'
+import Button from '../../../components/Button'
+import Layout from '../../../layout/layout'
 import Link from 'next/link'
-import Card from '../../components/Card'
-import { loadDB } from '../../config/firebase'
+import Card from '../../../components/Card'
+import { loadDB } from '../../../config/firebase'
 
 
 export const HairCare = (props) => {
@@ -12,7 +12,7 @@ export const HairCare = (props) => {
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`All`)
+    const [aim, setAim] = useState(`Hair Spray`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
     
@@ -160,7 +160,7 @@ export const HairCare = (props) => {
 }
 
 
-export const getStaticProps = async ({params}) => {
+export const getStaticProps = async () => {
     let result = await new Promise((resolve, reject) => {
         loadDB().firestore()
             .collection('hair')

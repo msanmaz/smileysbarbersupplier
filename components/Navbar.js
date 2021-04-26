@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className={` w-full px-6 flex items-center lg:py-0 py-2 bg-black`}>
                 <div className="flex my-4">
                     <Link href="/">
-                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-20 animate md:flex hidden" version="1.2" viewBox="0 0 375 375">
+                        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-10 animate md:flex" version="1.2" viewBox="0 0 375 375">
                             <defs />
                             <defs>
                                 <symbol id="a" overflow="visible">
@@ -97,7 +97,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                <div className="justify-center pt-2 relative mx-auto text-gray-600 hidden md:flex">
+                <div className="justify-center pt-2 relative mx-auto text-gray-600 md:flex">
                     <input className="border-2 border-gray-300 bg-white h-10 px-5 md:pr-56 pr-0 rounded-lg text-sm focus:outline-none"
                         type="search" name="search" placeholder="Search" />
                     <button type="submit" className="absolute left-97 top-0 mt-5">
@@ -149,7 +149,7 @@ export default function Navbar() {
 
                 <nav>
                     <aside
-                        className={`transform top-0 z-50 right-0 w-64 bg-navside fixed h-full overflow-auto ease-in-out rounded-l-xl transition-all duration-300 z-30"
+                        className={`transform top-0 z-20 right-0 w-64 bg-navside fixed h-full overflow-auto ease-in-out rounded-l-xl transition-all duration-300 z-30"
                                     ${isOpen ? 'translate-x-0 visible' : 'translate-x-full invisible'}`}>
                         <ul className="items-center justify-between text-base text-white pt-4 mt-14 ml-20 lg:pt-0">
                             <li><a className="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-white" href="/">Home Page</a></li>
@@ -216,7 +216,7 @@ export default function Navbar() {
             </div>
 
 
-            <div className="w-full bg-white flex-wrap px-4 space-x-4 flex">
+            <div className="w-full bg-white flex-wrap px-4  space-x-4 flex">
                             <Dropdown  category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totext" cat7="Permasharp" cat8="All Brands" url="brands" />
                             <Dropdown  category={`Hair&Care`} cat1="Hair Tonic" cat1url="hairtonic" cat2="Hair Spray" cat2url="hairspray" cat9="Hair Wax" cat9url="hairwax" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo" cat7url="shampoo" cat8="All Hair&Care"  url={`haircare`}  />
                             <Dropdown  category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat6="Shaving Gel" cat7="Blood Matches" cat8="All Beard&Shave" url="beardshave" />

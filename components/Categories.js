@@ -9,9 +9,9 @@ export default function Categories() {
 
                 <div className="flex flex-wrap md:flex-nowrap flex-1 min-w-full px-4" data-aos-id-blocks>
 
-                    <div className="md:w-3/0 w-full  flex grid-1">
-                        <div className="flex mt-4 flex-1 p-4 rounded-lg bg-center" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1588778851773-cb9d7656d9c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80)", height:"37rem" }}>
-                            <div className="md:h-half flex items-stretch">
+                    <div className="md:w-3/0 w-full  flex grid-1 px-4 md:px-auto">
+                        <div className="flex mt-4 md:h-half flex-1 p-4 rounded-lg bg-center h-screen" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1588778851773-cb9d7656d9c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80)"}}>
+                            <div className="flex items-stretch">
 
                                 <div class="absolute bottom-20 left-10 mx-5 mt-2 flex justify-between items-center">
                                 <a href="#" class="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Shaving Products

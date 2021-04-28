@@ -217,7 +217,7 @@ export default function Navbar() {
 
 
             <div className="w-full bg-white flex-wrap px-4  space-x-4 flex">
-                            <Dropdown  category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totext" cat7="Permasharp" cat8="All Brands" url="brands" />
+                            <Dropdown  category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totex" cat6url="Totex" cat7="Permasharp" cat8="All Brands" url="brands" />
                             <Dropdown  category={`Hair&Care`} cat1="Hair Tonic" cat1url="hairtonic" cat2="Hair Spray" cat2url="hairspray" cat9="Hair Wax" cat9url="hairwax" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo" cat7url="shampoo" cat8="All Hair&Care"  url={`haircare`}  />
                             <Dropdown  category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat6="Shaving Gel" cat7="Blood Matches" cat8="All Beard&Shave" url="beardshave" />
                             <Dropdown  category={`Barbering`} cat1="Electrical" cat2="Scissors" cat3={`Capes&Jackets`} cat4="Aprons" cat4="Hygiene" cat5="Water Sprays" cat6="All"  />

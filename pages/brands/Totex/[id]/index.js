@@ -11,7 +11,7 @@ const HairProducts = (props) => {
                     <ol class="flex text-grey-dark">
                         <Link href='/'><li class="text-blue font-bold">Home</li></Link>
                         <li><span class="mx-2">/</span></li>
-                        <Link href={`/haircare/${props.route}`} as={`/haircare/${props.route}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
+                        <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
                         <li><span class="mx-2">/</span></li>
                         <li>{props.name}</li>
                     </ol>
@@ -24,7 +24,7 @@ const HairProducts = (props) => {
                         <div className="md:my-24 my-4">
 
                             <div className="w-full">
-                                <Link href={`/haircare/${props.route}`} as={`/haircare/${props.route}`}>
+                                <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}>
                                     <div
                                         class="p-4 md:pt-20 pt-32 cursor-pointer w-full">
                                         <h3 class="text-lg font-semibold inline-flex">
@@ -180,6 +180,8 @@ export const getStaticProps = async ({ params }) => {
             content['img'] = result.data().img;
             content['name'] = result.data().name;
             content['route'] = result.data().route;
+            content['brand'] = result.data().brand;
+
             content['desc'] = result.data().desc;
             content['cat'] = result.data().cat;
             content['volume'] = result.data().volume;

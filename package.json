@@ -12,6 +12,9 @@
     "start": "NODE_ENV=development node server.js"
   },
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "alpinejs": "^2.8.1",
     "concurrently": "^6.0.0",
     "cross-env": "^7.0.3",

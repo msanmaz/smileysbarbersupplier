@@ -12,7 +12,7 @@ export const HairCare = (props) => {
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`Hair Spray`)
+    const [aim, setAim] = useState(`Totex`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
     
@@ -23,7 +23,7 @@ export const HairCare = (props) => {
                 let firebase = loadDB();
                 firebase.firestore()
                     .collection("hair")
-                    .where('cat', '==', `${aim}`)
+                    .where('brand', '==', `${aim}`)
                     .onSnapshot(snap => {
                         const desc = snap.docs.map(doc => ({
                             id: doc.id,
@@ -97,7 +97,7 @@ export const HairCare = (props) => {
                                     {!products || aim =='All'  ?
                                         <div className="flex flex-wrap mt-20 w-full">
                                             {props.plainData.map(product =>
-                                                <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
+                                                <Link href={`/brands/${product.brand}/${product.id}`} as={`/brands/${product.brand}/${product.id}`}>
                                                 <div className="md:w-1/4 w-1/2 px-4 py-4">
                                                         <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
@@ -110,7 +110,7 @@ export const HairCare = (props) => {
                                                 :
                                     <div className="flex flex-wrap mt-20 w-full">
                                         {products.map(product =>
-                                                <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
+                                                <Link href={`/brands/${product.brand}/${product.id}`} as={`/brands/${product.brand}/${product.id}`}>
                                                 <div className={`md:w-1/4 w-1/2 px-4 py-4 ` }>
                                                     <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 

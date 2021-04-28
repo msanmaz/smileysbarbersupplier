@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Layout from '../layout/layout'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Product from '../components/Product'
 
 export default function Home() {
   const printButtonLabel = (event) => {
@@ -54,8 +55,9 @@ export default function Home() {
         <div className="flex flex-wrap md:ml-12">
           {products.map(product =>
             <Link href="/products/[id]" as={'/products/' + product.id}>
-              <div className="md:px-6 px-auto pr-6">
-                <Card gorsel={product.img} key={product.id} brand={product.brand} cat={product.cat} volume={product.volume} nam={product.name} />
+              <div className="w-1/4 px-4">
+                {/* <Card gorsel={product.img} key={product.id} brand={product.brand} cat={product.cat} volume={product.volume} nam={product.name} /> */}
+                <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
               </div>
 

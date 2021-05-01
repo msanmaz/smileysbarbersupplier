@@ -101,13 +101,22 @@ function Footer() {
 
           {/* 3rd block */}
           <div className="sm:col-span-6  md:col-span-3 lg:col-span-2">
-            <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Kaynaklarımız</h6>
+            <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Products:</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link href="/portfoy"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Satılık Portföyümüz</p></Link>
+                <Link href="/portfoy"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Totex</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Kiralık Portföyümüz</p></Link>
+                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Permasharp</p></Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Derby</p></Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
               </li>
 
 
@@ -119,22 +128,22 @@ function Footer() {
             <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Menu</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link href="/" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Ana Sayfa</p></Link>
+                <Link href="/" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Home Page</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/about" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Hakkımızda</p></Link>
+                <Link href="/about" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Products</p></Link>
               </li>
 
               <li className="mb-2">
-                <Link href="/contact"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">İletişim</p></Link>
+                <Link href="/contact"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Contact Us</p></Link>
               </li>
             </ul>
           </div>
 
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-            <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Bultenimize Kayıt Ol</h6>
-            <p className="text-sm text-gray-600 mb-4 dark:text-white">Portföyümüzdeki En Son Güncellemeleri Takip Etmek İçin</p>
+            <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Subscribe to our Newsletter</h6>
+            <p className="text-sm text-gray-600 mb-4 dark:text-white">For Following our latest products and discounts!</p>
             <form>
               <div className="flex flex-wrap mb-4">
                 <div className="w-full">

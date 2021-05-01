@@ -55,7 +55,7 @@ export default function Home() {
         <div className="flex flex-wrap md:ml-12">
           {products.map(product =>
             <Link href="/products/[id]" as={'/products/' + product.id}>
-              <div className="w-1/4 px-4">
+              <div className="w-1/2 md:w-1/4 py-4 px-4">
                 {/* <Card gorsel={product.img} key={product.id} brand={product.brand} cat={product.cat} volume={product.volume} nam={product.name} /> */}
                 <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 

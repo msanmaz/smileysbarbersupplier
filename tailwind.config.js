@@ -12,12 +12,12 @@ module.exports = {
 
       backgroundImage: theme => ({
         'smiley': "url('/smiley2bg.svg')",
-        'hair': "url('/hair.jpeg')",
+        'hair': "url('/categoryimg.jpeg')",
         'razor': "url('/category1.1.jpeg')",
-        'products': "url('/raza.jpeg')",
+        'products': "url('/blackcat.jpeg')",
         'productsbg': "url('/productsbg.jpeg')",
         'razor1': "url('/category1.jpeg')",
-        'shave': "url('/category2.jpeg')",
+        'shave': "url('/waxcat.jpeg')",
       }),
     
     },

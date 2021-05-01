@@ -86,7 +86,7 @@ export const HairCare = (props) => {
 
                                         <div className="flex w-full" data-aos-id-blocks>
 
-                                            <div className="px-1 space-x-2">
+                                        <div className="md:px-1 px-auto space-y-2 space-x-2">
                                                 <Button buttons={["All", "Hair Tonic","Hair Wax", "Hair Spray", "Hair Oil", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 

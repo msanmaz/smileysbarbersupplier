@@ -556,6 +556,12 @@ video {
   }
 }
 
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -644,11 +650,6 @@ video {
   background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
 }
 
-.bg-indigo-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
-}
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -688,7 +689,7 @@ video {
 }
 
 .bg-hair {
-  background-image: url('/hair.jpeg');
+  background-image: url('/categoryimg.jpeg');
 }
 
 .bg-razor {
@@ -696,7 +697,7 @@ video {
 }
 
 .bg-products {
-  background-image: url('/raza.jpeg');
+  background-image: url('/blackcat.jpeg');
 }
 
 .bg-productsbg {
@@ -708,7 +709,7 @@ video {
 }
 
 .bg-shave {
-  background-image: url('/category2.jpeg');
+  background-image: url('/waxcat.jpeg');
 }
 
 .from-transparent {
@@ -1255,11 +1256,6 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .py-2 {
@@ -1944,6 +1940,14 @@ video {
   transform: scale(1.05);
 }
 
+.catcat  {
+  transition: transform 0.3s ease-in-out;
+}
+
+.catcat:hover  {
+  transform: scale(1.05);
+}
+
 @media (min-width: 640px) {
   .sm\:h-8 {
     height: 2rem;
@@ -2099,6 +2103,11 @@ video {
     padding: 1rem;
   }
 
+  .md\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -2235,4 +2244,3 @@ video {
 
 @media (min-width: 1536px) {
 }
-    

@@ -86,7 +86,7 @@ export const HairCare = (props) => {
 
                                         <div className="flex w-full" data-aos-id-blocks>
 
-                                            <div className="px-1 space-x-2">
+                                        <div className="md:px-1 px-auto space-y-2 space-x-2">
                                                 <Button buttons={["All", "Absolute Arko","Astra", "Clipperside", "Derby", "Totex", "Permasharp"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
@@ -181,6 +181,7 @@ export const getStaticProps = async ({params}) => {
             })
     })
     const plainData = JSON.parse(JSON.stringify(result))
+    console.log(params)
     return { props: { plainData } }
 }
 

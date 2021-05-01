@@ -2,7 +2,7 @@ import { React, useState,useEffect } from 'react'
 import Button from '../../../components/Button'
 import Layout from '../../../layout/layout'
 import Link from 'next/link'
-import Card from '../../../components/Card'
+import Product from '../../../components/Product'
 import { loadDB } from '../../../config/firebase'
 
 
@@ -86,7 +86,7 @@ export const HairCare = (props) => {
 
                                         <div className="flex w-full" data-aos-id-blocks>
 
-                                            <div className="px-1 space-x-2">
+                                        <div className="md:px-1 px-auto space-y-2 space-x-2">
                                                 <Button buttons={["All", "Hair Tonic","Hair Wax", "Hair Spray", "Hair Oil", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
@@ -98,8 +98,8 @@ export const HairCare = (props) => {
                                         <div className="flex flex-wrap mt-20">
                                             {props.plainData.map(product =>
                                                 <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
-                                                <div className="md:px-6 px-auto pr-6">
-                                                        <Card gorsel={product.img} key={product.id} brand={product.brand} volume={product.volume} nam={product.name} />
+                                                <div className="md:w-1/4 w-1/2 px-4 py-4">
+                                                <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
                                                     </div>
                                                 </Link>
@@ -111,8 +111,8 @@ export const HairCare = (props) => {
                                     <div className="flex flex-wrap mt-20">
                                         {products.map(product =>
                                                 <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
-                                                <div className="md:px-6 px-auto pr-6">
-                                                    <Card gorsel={product.img} key={product.id} brand={product.brand} volume={product.volume} nam={product.name} />
+                                                <div className="md:w-1/4 w-1/2 px-4 py-4">
+                                                <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
                                                 </div>
                                             </Link>

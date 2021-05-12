@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Product from '../components/Product'
 
+
 export default function Home() {
   const printButtonLabel = (event) => {
     setAim(event.target.name)
@@ -16,12 +17,14 @@ export default function Home() {
   const [aim, setAim] = useState('newest')
   const [loading, setLoading] = useState(true);
 
+
+
   useEffect(() => {
     setTimeout(() => {
       let firebase = loadDB();
       firebase.firestore()
         .collection("hair")
-        .where('type', '==', `${aim}`)
+        .where('index', '==', `${aim}`)
         .onSnapshot(snap => {
           const desc = snap.docs.map(doc => ({
             id: doc.id,
@@ -52,7 +55,7 @@ export default function Home() {
 
       </div>
       {loading ? "Loading Component Will be gone in 2 sec" :
-        <div className="flex flex-wrap md:ml-12">
+        <div className="flex flex-wrap md:ml-2">
           {products.map(product =>
             <Link href="/products/[id]" as={'/products/' + product.id}>
               <div className="w-1/2 md:w-1/4 py-4 px-4">

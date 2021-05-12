@@ -3,18 +3,20 @@ import React, { useCallback, useState } from 'react';
 import Link from 'next/link'
 import Hamburger from 'hamburger-react'
 import Dropdown from './Dropdown'
-
+import { useRouter } from 'next/router'
+import SearchBar from './SearchBar';
 
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
-    React.useLayoutEffect = React.useEffect
+    const router = useRouter()
+
 
 
     return (
         <div className="fixed z-50 w-full">
-        <div className={` w-full px-6 flex items-center lg:py-0 py-2 bg-black`}>
+            <div className={` w-full px-6 flex items-center lg:py-0 py-2 bg-black`}>
                 <div className="flex my-4">
                     <Link href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-10 animate md:flex" version="1.2" viewBox="0 0 375 375">
@@ -98,17 +100,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="justify-center pt-2 relative mx-auto text-gray-600 md:flex">
-                    <input className="border-2 border-gray-300 bg-white h-10 px-5 md:pr-56 pr-0 rounded-lg text-sm focus:outline-none"
-                        type="search" name="search" placeholder="Search" />
-                    <button type="submit" className="absolute left-97 top-0 mt-5">
-                        <svg className="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-                            xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                            viewBox="0 0 56.966 56.966" style={{ enableBackground: "new 0 0 56.966 56.966" }}
-                            width="512px" height="512px">
-                            <path
-                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-                        </svg>
-                    </button>
+                    <SearchBar/>
                 </div>
 
 
@@ -133,7 +125,7 @@ export default function Navbar() {
                     </a>
                 </div>
 
- 
+
 
 
 
@@ -154,44 +146,44 @@ export default function Navbar() {
                         <ul className="items-center justify-between text-base text-white pt-4 mt-14 ml-20 lg:pt-0">
                             <li><a className="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-white" href="/">Home Page</a></li>
                             <li className="flex"><button onClick={() => setShowMenu(!showMenu)} className="lg:p-4 flex animate py-3 px-0 border-b-2 border-transparent hover:border-white" >Barbering
-<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-current text-white mt-1 pl-1" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style={{enableBackground:"new 0 0 512 512"}}><g>
-<g xmlns="http://www.w3.org/2000/svg">
-	<g>
-		<polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093   "/>
-	</g>
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-<g xmlns="http://www.w3.org/2000/svg">
-</g>
-</g></svg>
-  </button></li>
+<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-current text-white mt-1 pl-1" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 256 256" style={{ enableBackground: "new 0 0 512 512" }}><g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093   " />
+                                        </g>
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                    </g>
+                                </g></svg>
+                            </button></li>
                             {showMenu == true &&
 
                                 <div className="menu">
@@ -212,20 +204,20 @@ export default function Navbar() {
 
 
                 </nav>
-                
+
             </div>
 
 
             <div className="w-full bg-white flex-wrap px-4  space-x-4 flex">
-                            <Dropdown  category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totex" cat6url="Totex" cat7="Permasharp" cat8="All Brands" url="brands" />
-                            <Dropdown  category={`Hair&Care`} cat1="Hair Tonic" cat1url="hairtonic" cat2="Hair Spray" cat2url="hairspray" cat9="Hair Wax" cat9url="hairwax" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo" cat7url="shampoo" cat8="All Hair&Care"  url={`haircare`}  />
-                            <Dropdown  category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat6="Shaving Gel" cat7="Blood Matches" cat8="All Beard&Shave" url="beardshave" />
-                            <Dropdown  category={`Barbering`} cat1="Electrical" cat2="Scissors" cat3={`Capes&Jackets`} cat4="Aprons" cat4="Hygiene" cat5="Water Sprays" cat6="All"  />
+                <Dropdown category={`Brands`} cat1="Absolute" cat2="Arko" cat3="Astra" cat4="Barbicide" cat4="Clipperside" cat5="Derby" cat6="Totex" cat6url="Totex" cat7="Permasharp" cat8="All Brands" url="brands" />
+                <Dropdown category={`Hair&Care`} cat1="Hair Tonic" cat1url="hairtonic" cat2="Hair Spray" cat2url="hairspray" cat9="Hair Wax" cat9url="hairwax" cat3="Hair Oil" cat4="Brush And Combs" cat4="Gum Gel" cat5="Serum" cat6="Conditioner Spray" cat7="Shampoo" cat7url="shampoo" cat8="All Hair&Care" url={`haircare`} />
+                <Dropdown category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat6="Shaving Gel" cat7="Blood Matches" cat8="All Beard&Shave" url="beardandshave" />
+                <Dropdown category={`Barbering`} cat1="Electrical" cat2="Scissors" cat3={`Capes&Jackets`} cat4="Aprons" cat4="Hygiene" cat5="Water Sprays" cat6="All" />
 
 
 
-                </div>
-           
+            </div>
+
 
         </div>
     )

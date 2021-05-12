@@ -18,6 +18,8 @@ module.exports = {
         'productsbg': "url('/productsbg.jpeg')",
         'razor1': "url('/category1.jpeg')",
         'shave': "url('/waxcat.jpeg')",
+        'trimmer': "url('/beardtrimmer.jpeg')",
+
       }),
     
     },
@@ -78,6 +80,7 @@ module.exports = {
       60: '15rem',
       64: '16rem',
       72: '17rem',
+      73:'20rem',
       80: '21rem',
       96: '24rem',
       30: '25rem',

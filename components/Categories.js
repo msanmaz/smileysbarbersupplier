@@ -8,9 +8,9 @@ export default function Categories() {
                 <h2 className="md:text-3xl text-2xl font-bold flex justify-center text-black dark:text-white">Products</h2>
 
 
-                <div className="flex flex-wrap md:flex-nowrap flex-1 min-w-full md:px-4" data-aos-id-blocks>
+                <div className="flex flex-wrap md:flex-nowrap flex-1 min-w-full px-4" data-aos-id-blocks>
 
-                    <div className="md:w-3/0 w-full hidden  md:flex grid-1 px-4 md:px-auto">
+                    <div className="md:w-3/0 w-full hidden c-card  md:flex grid-1 px-4 md:px-auto">
                         <div className="flex mt-4 md:h-half flex-1 p-4 rounded-lg bg-center bg-cover h-screen" style={{ backgroundImage: "url(https://cdn.webshopapp.com/shops/266822/themes/172315/v/877/assets/homepage-banner-1-image.jpg?20210313143846?20200422160649)"}}>
                             <div className="flex items-stretch">
 
@@ -95,7 +95,7 @@ export default function Categories() {
 
 
                             <Link href="/brands/Totex">
-                                <div className="bg-hair catcat bg-cover bg-center flex relative w-full rounded-lg">
+                                <div className="bg-trimmer catcat bg-cover bg-center flex relative w-full rounded-lg">
                                     <div class="absolute rounded-lg bottom-0 mt-20 right-0 top-1 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
                                     <div class="absolute bottom-1 left-0 mx-5 mt-2 flex justify-between items-center">
                                         <a href="#" class="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Shaving Products

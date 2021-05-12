@@ -95,7 +95,7 @@ export const HairCare = (props) => {
 
 
                                     {!products || aim =='All'  ?
-                                        <div className="flex flex-wrap mt-20">
+                                        <div className="flex flex-wrap mt-20 w-full">
                                             {props.plainData.map(product =>
                                                 <Link href={`/brands/${product.route}/${product.id}`} as={`/brands/${product.route}/${product.id}`}>
                               <div className={`md:w-1/4 w-1/2 px-4 py-4 ` }>
@@ -108,7 +108,7 @@ export const HairCare = (props) => {
                                         </div>
                                     
                                                 :
-                                    <div className="flex flex-wrap mt-20">
+                                    <div className="flex flex-wrap mt-20 w-full">
                                         {products.map(product =>
                                                 <Link href={`/brands/${product.route}/${product.id}`} as={`/brands/${product.route}/${product.id}`}>
                                                  <div className={`md:w-1/4 w-1/2 px-4 py-4 ` }>

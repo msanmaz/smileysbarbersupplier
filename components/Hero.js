@@ -68,7 +68,7 @@ export default function Hero() {
                                 <img src="/absolutebeardoil.png" />
                             </div>
                             <div className="mt-5">
-                                <img src="/nobgwahl2.png" />
+                                <img src="/arkoshavingcreamnobg.png" />
                             </div>
                         </Carousel>
 

@@ -80,9 +80,6 @@ const Dropdown = (props) => {
                   {props.cat2}
                   </div>
                 </Link>
-
-
-                
                 <Link
                   href={`/${props.url}/${props.cat9url}`} as={`/${props.url}/${props.cat9url}`}
 
@@ -92,15 +89,15 @@ const Dropdown = (props) => {
                   {props.cat9}
                   </div>
                 </Link>
-                <a
-                  href="#pablo"
-                  className={
-                    "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1 text-gray-800 " 
-                  }
+                <Link
+                  href={`/${props.url}/${props.cat9url}`} as={`/${props.url}/${props.cat9url}`}
+
                   onClick={e => e.preventDefault()}
                 >
+                  <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
                   {props.cat3}
-                </a>
+                  </div>
+                </Link>
                 <a
                   href="#pablo"
                   className={

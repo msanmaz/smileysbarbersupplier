@@ -45,7 +45,7 @@ const HairProducts = (props) => {
                     </div>
                     <div className="md:w-3/5 w-full flex md:mt-52">
 
-                        <div className=" w-full">
+                        <div className="w-full">
 
 
                             <div className="px-4  rf flex py-4 text-xl"> {props.cat}</div>
@@ -66,22 +66,22 @@ const HairProducts = (props) => {
 
                             <div className="py-4 px-4 space-y-4">
 
-                                <div class="relative ff p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-extrabold text-xl">
+                                <div class="relative  p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
+                                    <div className="font-semibold text-lg">
                                         BUY 12 FOR AND SAVE 7%
             </div>
                                 </div>
 
 
-                                <div class="relative ff p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-extrabold text-xl">
+                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
+                                    <div className="font-semibold text-lg">
                                         BUY 12 FOR AND SAVE 7%
             </div>
                                 </div>
 
 
-                                <div class="relative ff p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-extrabold text-xl ">
+                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
+                                    <div className="font-semibold text-lg ">
                                         BUY 12 FOR AND SAVE 7%
             </div>
                                 </div>
@@ -119,10 +119,33 @@ const HairProducts = (props) => {
                 </div>
 
 
-                <div className="flex justify-center w-full md:w-1/2">
-                    <div className="font-semibold text-2xl">
+                <div className="flex flex-wrap w-full md:w-1/2">
+                    <div className="font-semibold text-2xl h-10 w-full">
                         Related Products
-                </div>
+                    </div>
+                    <div className="flex w-full">
+                        <div className="w-full">
+                        <div>
+                        Product 1
+                    </div>
+                    <div>
+                        Product 2
+                    </div>
+
+                        </div>
+
+                        <div className="w-full">
+                        <div>
+                        Product 3
+                    </div>
+                    <div>
+                        Product 4
+                    </div>
+
+                        </div>
+                    </div>
+
+           
 
                 </div>
 

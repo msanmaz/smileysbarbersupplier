@@ -164,6 +164,7 @@ export const getStaticProps = async () => {
     let result = await new Promise((resolve, reject) => {
         loadDB().firestore()
             .collection('hair')
+            .where("type","==","haircare")
             .get()
             .then(snapshot => {
                 let data = []

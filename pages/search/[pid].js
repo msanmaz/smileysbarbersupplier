@@ -1,0 +1,151 @@
+import Button from '../../components/Button'
+import Layout from '../../layout/layout'
+import Link from 'next/link'
+import Product from '../../components/Product'
+import { loadDB } from '../../config/firebase'
+import { useRouter } from 'next/router'
+import {
+    InstantSearch,
+    Hits,
+    SearchBox,
+  } from 'react-instantsearch-dom';
+  import algoliasearch from 'algoliasearch/lite';
+  import React, { createElement, Fragment, useEffect, useRef,useState } from 'react';
+
+
+
+
+
+
+  
+export const HairCare = (props) => {
+
+
+
+    const router = useRouter()
+    const { pid } = router.query
+    console.log({ pid })
+    const printButtonLabel = (event) => {
+        setAim(event.target.name)
+    };
+    const [aim, setAim] = useState(`All`)
+    const [loading, setLoading] = useState(true);
+    const [products, setProducts] = useState()
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (aim) {
+                let firebase = loadDB();
+                firebase.firestore()
+                    .collection("hair")
+                    .where('brand', '==', `${aim}`)
+                    .onSnapshot(snap => {
+                        const desc = snap.docs.map(doc => ({
+                            id: doc.id,
+                            ...doc.data()
+                        }));
+                        setProducts(desc);
+                        setLoading(false)
+                    });
+            }
+
+        }, 300)
+
+    }, [aim]);
+
+
+
+
+    return (
+        <>
+
+            <>
+
+                <div className="pt-36">
+                    <div className="flex flex-wrap md:flex-nowrap  flex-1 min-w-full" data-aos-id-blocks>
+
+                        <div className="md:w-1/4 w-full  flex items-stretch grid-1 max-h-44">
+                            <div className="md:flex hidden  md:flex-wrap flex-1 p-4">
+
+
+                                <div className="w-full h-screen shadow-md bg-gray-300 rounded-lg">
+                                    <h1 className="text-2xl font-italic px-12 py-4">Categories</h1>
+                                </div>
+
+                                <div className="w-full h-screen my-8 shadow-md bg-gray-300 rounded-lg">
+                                    <h1 className="text-2xl font-italic px-12 py-4">Newsletter</h1>
+                                    <h2 className="text-sm px-12">Get the latest updates, news and product offers via email</h2>
+                                    <div className="px-12 py-4">
+                                        <input className="rounded-lg" placeholder="Email"></input>
+                                        <button className="py-2 px-4 my-2 bg-black text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" >
+                                            Subscribe
+                </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="md:w-3/4 w-full flex flex-wrap items-stretch grid2">
+                            <div className="flex  flex-wrap flex-1 min-w-full">
+
+                                <div className="w-full flex p-4 items-stretch md:h-tam h-screen">
+                                    <div className="bg-productsbg bg-cover bg-left-top flex relative w-full rounded-lg">
+                                        <h1 className="text-3xl font-bold text-white font-sans absolute top-8 left-2">Products</h1>
+                                    </div>
+                                </div>
+
+
+                                <div className="absolute md:top-55 top-80 w-full md:w-3/4 px-4 ">
+
+                                    <div className="flex w-full" data-aos-id-blocks>
+                                        Search Results:
+
+                                        </div>
+                                </div>
+
+
+                     
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </>
+
+
+
+
+
+        </>
+    )
+
+
+
+
+
+}
+
+
+
+export default HairCare
+HairCare.Layout = Layout;

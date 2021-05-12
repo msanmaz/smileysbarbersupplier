@@ -50,3 +50,154 @@
     .catcat:hover  {
         transform: scale(1.05);
     }
+
+
+
+    .react-autosuggest__input{
+        width:35rem;
+        border-radius: 1rem;
+        height: 2.1rem;
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+    }
+
+    .react-autosuggest__suggestions-container{
+        position:absolute;
+        z-index: 999;
+        width:35rem;
+    }
+
+
+ /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+    .react-autosuggest__input{
+        width:13rem;
+    }
+    .react-autosuggest__suggestions-container{
+        width:13rem;
+    }
+}

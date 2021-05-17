@@ -1,8 +1,28 @@
 import { loadDB } from '../../../../config/firebase'
 import Layout from '../../../../layout/layout'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import RelatedProducts from '../../../../components/RelatedProducts'
 const HairProducts = (props) => {
+    const [products, setProducts] = useState();
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+
+        let firebase = loadDB();
+        firebase.firestore()
+            .collection("hair")
+            .onSnapshot(snap => {
+                const desc = snap.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setProducts(desc);
+                setLoading(false)
+            });
+
+
+    }, []);
 
     return (
         <div className="md:px-8 px-auto w-full">
@@ -119,10 +139,35 @@ const HairProducts = (props) => {
                 </div>
 
 
-                <div className="flex justify-center w-full md:w-1/2">
-                    <div className="font-semibold text-2xl">
+                <div className="flex flex-wrap w-full md:w-1/2">
+                    <div className="font-semibold text-2xl h-10 w-full">
                         Related Products
-                </div>
+                    </div>
+
+                    {loading ? "Loading Component Will be gone in 2 sec" :
+                        <div className="flex w-full">
+                            <div className="w-full space-y-4 ">
+                                {products.slice(0, 2).map(product =>
+                                    <Link href="/products/[id]" as={'/products/' + product.id}>
+                                        <RelatedProducts name={product.name} cat={product.cat} brands={product.brand} image={product.img} />
+                                    </Link>
+
+                                )}
+
+                            </div>
+
+                            <div className="w-full space-y-4">
+                                {products.slice(10, 12).map(product =>
+                                                                    <Link href="/products/[id]" as={'/products/' + product.id}>
+
+                                    <RelatedProducts name={product.name} cat={product.cat} brands={product.brand} image={product.img} />
+                                        </Link>
+
+                                )}
+                            </div>
+                        </div>
+                    }
+
 
                 </div>
 

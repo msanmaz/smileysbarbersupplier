@@ -37,10 +37,6 @@ export default function Home() {
 
   }, [aim]);
 
-  useEffect(() => {
-    console.log(products)
-    console.log(aim)
-  })
   return (
     <div>
       <Hero />

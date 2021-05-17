@@ -15,13 +15,13 @@ export default function Categories() {
                             <div className="flex items-stretch">
 
                                 <div class="absolute bottom-20 left-10 mx-5 mt-2 flex justify-between items-center">
-                                <a href="#" class="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Shaving Products
+                                <a href="#" class="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Hygiene Products
                                 </a>
                                 </div>
 
 
                                 <main class="p-2 z-10">
-                                <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Beard & Shave</a>
+                                <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Hygiene</a>
 
                               
                                 </main>
@@ -58,7 +58,7 @@ export default function Categories() {
 
 
                             <div className="md:w-1/2 w-full flex p-4 items-stretch md:h-tam h-screen">
-                            <Link href="/haircare">
+                            <Link href="/beardandshave">
 
                                 <div className="bg-razor1 catcat bg-cover bg-center flex relative w-full rounded-lg">
                                     <div class="absolute rounded-lg bottom-0 mt-20 right-0 top-1 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
@@ -94,16 +94,16 @@ export default function Categories() {
                             <div className="md:w-1/3 w-full flex p-4 items-stretch h-screen md:h-cate ">
 
 
-                            <Link href="/brands/Totex">
+                            <Link href="/barbering/electrical">
                                 <div className="bg-trimmer catcat bg-cover bg-center flex relative w-full rounded-lg">
                                     <div class="absolute rounded-lg bottom-0 mt-20 right-0 top-1 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
                                     <div class="absolute bottom-1 left-0 mx-5 mt-2 flex justify-between items-center">
-                                        <a href="#" class="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Shaving Products
+                                        <a href="#" class="text-md tracking-tight font-medium leading-7 font-regular text-white hover:underline">Discover Our Latest Electrical Shaving Products
     </a>
                                     </div>
                                     <main class="p-5 z-10">
 
-                                        <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Beard & Shave</a>
+                                        <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Electrical Shavers</a>
 
                                     </main>
 

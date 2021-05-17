@@ -1,8 +1,29 @@
 import { loadDB } from '../../../../config/firebase'
 import Layout from '../../../../layout/layout'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import RelatedProducts from '../../../../components/RelatedProducts'
 const HairProducts = (props) => {
+    const [products, setProducts] = useState();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        let firebase = loadDB();
+        firebase.firestore()
+            .collection("hair")
+            .onSnapshot(snap => {
+                const desc = snap.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setProducts(desc);
+                setLoading(false)
+            });
+
+
+    }, []);
 
     return (
         <div className="md:px-8 px-auto w-full">
@@ -11,7 +32,7 @@ const HairProducts = (props) => {
                     <ol class="flex text-grey-dark">
                         <Link href='/'><li class="text-blue font-bold">Home</li></Link>
                         <li><span class="mx-2">/</span></li>
-                        <Link href={`/beardandshave/${props.route}`} as={`/beardandshave/${props.route}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
+                        <Link href={`/barbering/${props.route}`} as={`/barbering/${props.route}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
                         <li><span class="mx-2">/</span></li>
                         <li>{props.name}</li>
                     </ol>
@@ -107,7 +128,7 @@ const HairProducts = (props) => {
 
                     <div className="flex w-full text-lg font-semibold px-4 py-4">Description:</div>
                     <div className="font-light px-4">
-                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
+                        {props.desc}
                     </div>
 
                     <div className="flex w-full text-lg font-semibold py-4 px-4">Usage:</div>
@@ -119,10 +140,35 @@ const HairProducts = (props) => {
                 </div>
 
 
-                <div className="flex justify-center w-full md:w-1/2">
-                    <div className="font-semibold text-2xl">
+                <div className="flex flex-wrap w-full md:w-1/2">
+                    <div className="font-semibold text-2xl h-10 w-full">
                         Related Products
-                </div>
+                    </div>
+
+                    {loading ? "Loading Component Will be gone in 2 sec" :
+                        <div className="flex w-full">
+                            <div className="w-full space-y-4 ">
+                                {products.slice(0, 2).map(product =>
+                                    <Link href="/products/[id]" as={'/products/' + product.id}>
+                                        <RelatedProducts name={product.name} cat={product.cat} brands={product.brand} image={product.img} />
+                                    </Link>
+
+                                )}
+
+                            </div>
+
+                            <div className="w-full space-y-4">
+                                {products.slice(10, 12).map(product =>
+                                                                    <Link href="/products/[id]" as={'/products/' + product.id}>
+
+                                    <RelatedProducts name={product.name} cat={product.cat} brands={product.brand} image={product.img} />
+                                        </Link>
+
+                                )}
+                            </div>
+                        </div>
+                    }
+
 
                 </div>
 

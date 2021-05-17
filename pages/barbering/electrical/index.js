@@ -87,7 +87,7 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                        <Button buttons={["All", "Beard Oil","Razors", "After Shave"]} doSomethingAfterClick={printButtonLabel} />
+                                        <Button buttons={["All", "Electrical","Hygiene", "Scissors",'Water Sprays']} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>
@@ -97,7 +97,7 @@ export const HairCare = (props) => {
                                     {!products || aim =='All'  ?
                                         <div className="flex flex-wrap mt-20 w-full">
                                             {props.plainData.map(product =>
-                                                <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
+                                                <Link href={`/barbering/${product.route}/${product.id}`} as={`/barbering/${product.route}/${product.id}`}>
                                                 <div className="md:w-1/4 w-1/2 px-4 py-4">
                                                 <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
@@ -110,7 +110,7 @@ export const HairCare = (props) => {
                                                 :
                                     <div className="flex flex-wrap mt-20 w-full">
                                         {products.map(product =>
-                                                <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
+                                                <Link href={`/barbering/${product.route}/${product.id}`} as={`/barbering/${product.route}/${product.id}`}>
                                                 <div className="md:w-1/4 w-1/2 px-4 py-4">
                                                 <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 

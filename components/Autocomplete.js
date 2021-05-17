@@ -25,7 +25,7 @@ const HitComponent = ({ hit }) => (
 <Link
  href={`/products/${hit.objectID}`} as={`/products/${hit.objectID}`}
 >
-    <div className="hit-content hover:bg-red-400 w-full flex cursor-pointer">
+    <div className="hit-content hover:bg-blue-200 w-full flex cursor-pointer">
     <div>
       <div className="hit-picture">
         <img className="w-14 h-14" src={`${hit.img}`} />

@@ -1,10 +1,10 @@
 import { React, useState,useEffect } from 'react'
-import Button from '../../components/Button' 
-import Layout from '../../layout/layout'
+import Button from '../../../components/Button'
+import Layout from '../../../layout/layout'
 import Link from 'next/link'
-import Product from '../../components/Product'
-import { loadDB } from '../../config/firebase'
-
+import Card from '../../../components/Card'
+import { loadDB } from '../../../config/firebase'
+import Product from '../../../components/Product'
 
 export const HairCare = (props) => {
 
@@ -12,15 +12,18 @@ export const HairCare = (props) => {
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`All`)
+    const [aim, setAim] = useState(`Conditioner`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
+    
 
     useEffect(() => {
         setTimeout(() => {
             if(aim){
-                let firebase = loadDB().firestore().collection("hair")
-                firebase.where('cat', '==', `${aim}`)
+                let firebase = loadDB();
+                firebase.firestore()
+                    .collection("hair")
+                    .where('cat', '==', `${aim}`)
                     .onSnapshot(snap => {
                         const desc = snap.docs.map(doc => ({
                             id: doc.id,
@@ -99,7 +102,7 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                                <Button buttons={["All", "Hair Wax", "Hair Spray", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
+                                        <Button buttons={["All", "Hair Wax", "Hair Spray", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>
@@ -111,7 +114,7 @@ export const HairCare = (props) => {
                                             {props.plainData.map(product =>
                                                 <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
                                                 <div className="md:w-1/4 w-1/2 px-4 py-4">
-                                                <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
+                                                        <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
                                                     </div>
                                                 </Link>
@@ -123,8 +126,8 @@ export const HairCare = (props) => {
                                     <div className="flex flex-wrap mt-20 w-full">
                                         {products.map(product =>
                                                 <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>
-                                                <div className="md:w-1/4 w-1/2 px-4 py-4">
-                                                <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
+                                                <div className={`md:w-1/4 w-1/2 px-4 py-4 ` }>
+                                                    <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
                                                 </div>
                                             </Link>
@@ -172,10 +175,11 @@ export const HairCare = (props) => {
 }
 
 
-export const getStaticProps = async ({params}) => {
+export const getStaticProps = async () => {
     let result = await new Promise((resolve, reject) => {
         loadDB().firestore()
             .collection('hair')
+            .where("type","==","haircare")
             .get()
             .then(snapshot => {
                 let data = []

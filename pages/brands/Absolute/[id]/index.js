@@ -3,7 +3,7 @@ import Layout from '../../../../layout/layout'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import RelatedProducts from '../../../../components/RelatedProducts'
+import Product from '../../../../components/Product'
 const HairProducts = (props) => {
     const [products, setProducts] = useState();
     const [loading, setLoading] = useState(true);
@@ -88,27 +88,26 @@ const HairProducts = (props) => {
 
 
 
-                            <div className="py-4 px-4 space-y-4">
+                            <div className="py-12 space-y-4">
+                                <div className="flex flex-wrap justify-center">
 
-                                <div class="relative  p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-semibold text-lg">
-                                        BUY 12 FOR AND SAVE 7%
-            </div>
+                                    <div className="flex font-semibold text-2xl px-4">
+                                        Product Information
+</div>
+
+                                    <div className="flex w-full text-lg font-semibold px-4 py-4">Description:</div>
+                                    <div className="font-light px-4">
+                                        {props.desc}
+                                    </div>
+
+                                    <div className="flex w-full text-lg font-semibold py-4 px-4">Usage:</div>
+                                    <div className="font-light px-4">
+                                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
+</div>
+
+
                                 </div>
 
-
-                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-semibold text-lg">
-                                        BUY 12 FOR AND SAVE 7%
-            </div>
-                                </div>
-
-
-                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-semibold text-lg ">
-                                        BUY 12 FOR AND SAVE 7%
-            </div>
-                                </div>
 
                             </div>
 
@@ -121,61 +120,34 @@ const HairProducts = (props) => {
 
             </div>
 
-            <div className="flex flex-wrap w-full mx-5">
-
-                <div className="flex flex-wrap justify-center w-11/12 md:w-1/2">
-
-                    <div className="flex font-semibold text-2xl px-4">
-                        Product Information
-                   </div>
-
-                    <div className="flex w-full text-lg font-semibold px-4 py-4">Description:</div>
-                    <div className="font-light px-4">
-                        {props.desc}
-                    </div>
-
-                    <div className="flex w-full text-lg font-semibold py-4 px-4">Usage:</div>
-                    <div className="font-light px-4">
-                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
-                    </div>
 
 
-                </div>
 
 
-                <div className="flex flex-wrap w-full md:w-1/2">
-                    <div className="font-semibold text-2xl h-10 w-full">
+                <div className="flex flex-wrap w-full">
+                    <div className="font-semibold flex justify-center text-3xl h-10 w-full">
                         Related Products
                     </div>
-
+                </div>
                     {loading ? "Loading Component Will be gone in 2 sec" :
-                        <div className="flex w-full">
-                            <div className="w-full space-y-4 ">
-                                {products.slice(0, 2).map(product =>
-                                    <Link href="/products/[id]" as={'/products/' + product.id}>
-                                        <RelatedProducts name={product.name} cat={product.cat} brands={product.brand} image={product.img} />
-                                    </Link>
+                        <div className="flex flex-wrap md:px-4">
+                            {products.slice(1,7).map(product =>
+                                <Link href="/products/[id]" as={'/products/' + product.id}>
+                                    <div className="w-1/2 md:w-1/7 py-4 px-4">
+                                        <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
-                                )}
+                                    </div>
 
-                            </div>
+                                </Link>
+                            )}
 
-                            <div className="w-full space-y-4">
-                                {products.slice(10, 12).map(product =>
-                                                                    <Link href="/products/[id]" as={'/products/' + product.id}>
-
-                                    <RelatedProducts name={product.name} cat={product.cat} brands={product.brand} image={product.img} />
-                                        </Link>
-
-                                )}
-                            </div>
                         </div>
                     }
 
 
-                </div>
 
-            </div>
+                
+
         </div>
     )
 

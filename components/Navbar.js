@@ -209,10 +209,10 @@ export default function Navbar() {
 
 
             <div className="w-full bg-white flex-wrap px-4  space-x-4 flex">
-                <Dropdown category={`Brands`} cat1="Absolute" cat1url="Absolute" cat2="Arko" cat2url="Arko" cat3="Astra" cat4="Barbicide" cat4url="barbicide" cat5="Clipperside" cat6="Derby" cat7="Totex" cat6url="Totex" cat8="Permasharp" cat9="All Brands" url="brands" />
-                <Dropdown category={`Hair&Care`} cat1="Hair Tonic" cat1url="hairtonic" cat2="Hair Spray" cat2url="hairspray" cat3="Hair Wax" cat3url="hairwax" cat4="Hair Oil" cat4url="hairoil" cat5="Shampoo" cat5url="shampoo"  cat6="Gum Gel" cat6url="gumgel" cat7="Serum" cat8="Conditioner Spray" cat9="All Hair&Care" url={`haircare`} />
-                <Dropdown category={`Beard&Shave`} cat1="Beard Oil" cat2="Razors" cat3="Blade Packs" cat4="Shaving Creams" cat4="Gum Gel" cat5="After Shave" cat5url="aftershave" cat6="Shaving Gel" cat7="Blood Matches" cat8="All Beard&Shave" url="beardandshave" />
-                <Dropdown category={`Barbering`} cat1="Electrical" cat1url="electrical" cat2="Scissors" cat3={`Capes&Jackets`} cat4="Aprons"  cat5="Hygiene" cat6="Water Sprays" cat6url="Water Sprays" cat7="All" url="barbering" />
+                <Dropdown category={`Brands`} cat1="Absolute" cat1url="Absolute" cat2="Arko" cat2url="Arko" cat3="Barbicide" cat3url="Barbicide" cat4="Totex" cat4url="Totex" cat5="All Brands" url="brands" />
+                <Dropdown category={`Hair&Care`}  cat1="Hair Spray" cat1url="hairspray" cat2="Hair Wax" cat2url="hairwax" cat3="Hair Oil" cat3url="hairoil" cat4="Shampoo" cat4url="shampoo"  cat5="Gum Gel" cat5url="gumgel"  cat6="Conditioner Spray" cat6url="conditioner" cat7="All Hair&Care" url={`haircare`} />
+                <Dropdown category={`Beard&Shave`}  cat1="Razors" cat1url="razors" cat2="After Shave" cat2url="aftershave" cat3="Beard Oil" cat3url="beardoil"  cat4="All Beard&Shave" url="beardandshave" />
+                <Dropdown category={`Barbering`} cat1="Electrical" cat1url="electrical" cat2="Scissors" cat3="Aprons" cat3url="aprons"  cat4="Hygiene" cat4url="hygiene" cat5="All" url="barbering" />
 
 
 

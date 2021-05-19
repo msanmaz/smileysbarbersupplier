@@ -76,7 +76,7 @@ export default function Hero() {
 
                     <div className="flex w-full md:w-2/6 md:mt-44 mt-32 px-8 md:mx-10 float-left">
                         <div className="flex w-full flex-col align-center">
-                            <h1 className="font-extrabold font-sans text-2xl md:text-7xl dark:text-white text-black">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-800 to-blue-500">BARBER</span>  SUPPLIER</h1>
+                            <h1 className="font-extrabold font-sans text-2xl md:text-7xl dark:text-white text-black">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-800 to-blue-500">BARBER</span>  SUPPLIES</h1>
                             <p className="font-medium font-sans text-lg md:text-2xl dark:text-white text-black"> Made by Barbers, Made to work</p>
                             <p className="font-medium font-sans text-sm md:text-xl dark:text-white text-black">For professional barber and personal care products</p>
             <Link href="products">

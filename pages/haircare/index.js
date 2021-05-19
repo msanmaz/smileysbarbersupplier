@@ -50,10 +50,26 @@ export const HairCare = (props) => {
                                 <div className="md:flex hidden  md:flex-wrap flex-1 p-4">
 
 
-                                    <div className="w-full h-screen shadow-md bg-gray-300 rounded-lg">
-                                        <h1 className="text-2xl font-italic px-12 py-4">Categories</h1>
+                                <div className="w-full h-screen shadow-md bg-gray-300 rounded-lg">
+                                    <h1 className="text-2xl font-italic px-12 py-4">Trade Only</h1>
+                                    <div className="w-full flex px-12 flex-wrap">
+                                        <Link href="/contact">       
+                                       <button className="py-2 px-4 my-2 bg-black text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" >
+                                            Contact Us
+                                        </button>
+
+                                        </Link>
+
+
+                                        <Link href="/about">
+                                            <button className="py-2 px-4 my-2 bg-black text-white font-semibold rounded-lg shadow-md active:bg-gray-900 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" >
+                                                Price Enquiry
+                                        </button>
+                                        </Link>
+
                                     </div>
 
+                                </div>
                                     <div className="w-full h-screen my-8 shadow-md bg-gray-300 rounded-lg">
                                         <h1 className="text-2xl font-italic px-12 py-4">Newsletter</h1>
                                         <h2 className="text-sm px-12">Get the latest updates, news and product offers via email</h2>
@@ -84,7 +100,7 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                                <Button buttons={["All", "Hair Tonic","Hair Wax", "Hair Spray", "Hair Oil", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
+                                                <Button buttons={["All", "Hair Wax", "Hair Spray", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>

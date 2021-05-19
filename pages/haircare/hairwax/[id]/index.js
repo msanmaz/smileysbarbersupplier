@@ -1,8 +1,32 @@
 import { loadDB } from '../../../../config/firebase'
 import Layout from '../../../../layout/layout'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-const TonicProducts = (props) => {
+import Product from '../../../../components/Product'
+const HairProducts = (props) => {
+    const [products, setProducts] = useState();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+
+        let firebase = loadDB();
+        firebase.firestore()
+            .collection("hair")
+            .onSnapshot(snap => {
+                const desc = snap.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setProducts(desc);
+                setLoading(false)
+            });
+
+
+    }, []);
+
+
+
 
     return (
         <div className="md:px-8 px-auto w-full">
@@ -11,7 +35,7 @@ const TonicProducts = (props) => {
                     <ol class="flex text-grey-dark">
                         <Link href='/'><li class="text-blue font-bold">Home</li></Link>
                         <li><span class="mx-2">/</span></li>
-                        <Link href={`/haircare/${props.route}`} as={`/haircare/${props.route}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
+                        <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
                         <li><span class="mx-2">/</span></li>
                         <li>{props.name}</li>
                     </ol>
@@ -24,7 +48,7 @@ const TonicProducts = (props) => {
                         <div className="md:my-24 my-4">
 
                             <div className="w-full">
-                                <Link href={`/haircare/${props.route}`} as={`/haircare/${props.route}`}>
+                                <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}>
                                     <div
                                         class="p-4 md:pt-20 pt-32 cursor-pointer w-full">
                                         <h3 class="text-lg font-semibold inline-flex">
@@ -45,11 +69,11 @@ const TonicProducts = (props) => {
                     </div>
                     <div className="md:w-3/5 w-full flex md:mt-52">
 
-                        <div className=" w-full">
+                        <div className="w-full">
 
 
-                            <div className="px-4 flex py-4 text-xl"> {props.cat}</div>
-                            <div className="px-4 font-semibold text-xl">{props.name}</div>
+                            <div className="px-4  rf flex py-4 text-xl"> {props.cat}</div>
+                            <div className="px-4 rf font-extrabold text-2xl">{props.name}</div>
                             <div className="md:float-right px-4 py-4">
                                 <button className="py-2 md:px-6 px-4 bg-red-500 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Price Enquiry </button>
                             </div>
@@ -64,27 +88,26 @@ const TonicProducts = (props) => {
 
 
 
-                            <div className="py-4 px-4 space-y-4">
+                            <div className="py-12 space-y-4">
+                                <div className="flex flex-wrap justify-center">
 
-                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-medium">
-                                        BUY 12 FOR AND SAVE 7%
-            </div>
+                                    <div className="flex font-semibold text-2xl px-4">
+                                        Product Information
+</div>
+
+                                    <div className="flex w-full text-lg font-semibold px-4 py-4">Description:</div>
+                                    <div className="font-light px-4">
+                                        {props.desc}
+                                    </div>
+
+                                    <div className="flex w-full text-lg font-semibold py-4 px-4">Usage:</div>
+                                    <div className="font-light px-4">
+                                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
+</div>
+
+
                                 </div>
 
-
-                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-medium">
-                                        BUY 12 FOR AND SAVE 7%
-            </div>
-                                </div>
-
-
-                                <div class="relative p-4 bg-gray-300 w-full m-auto flex-col flex rounded">
-                                    <div className="font-medium">
-                                        BUY 12 FOR AND SAVE 7%
-            </div>
-                                </div>
 
                             </div>
 
@@ -97,36 +120,34 @@ const TonicProducts = (props) => {
 
             </div>
 
-            <div className="flex flex-wrap w-full mx-5">
-
-                <div className="flex flex-wrap justify-center w-11/12 md:w-1/2">
-
-                    <div className="flex font-semibold text-2xl px-4">
-                        Product Information
-                   </div>
-
-                    <div className="flex w-full text-lg font-semibold px-4 py-4">Description:</div>
-                    <div className="font-light px-4">
-                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
-                    </div>
-
-                    <div className="flex w-full text-lg font-semibold py-4 px-4">Usage:</div>
-                    <div className="font-light px-4">
-                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
-                    </div>
 
 
-                </div>
 
 
-                <div className="flex justify-center w-full md:w-1/2">
-                    <div className="font-semibold text-2xl">
+                <div className="flex flex-wrap w-full">
+                    <div className="font-semibold flex justify-center text-3xl h-10 w-full">
                         Related Products
+                    </div>
                 </div>
+                    {loading ? "Loading Component Will be gone in 2 sec" :
+                        <div className="flex flex-wrap md:px-4">
+                            {products.slice(1,7).map(product =>
+                                <Link href="/products/[id]" as={'/products/' + product.id}>
+                                    <div className="w-1/2 md:w-1/7 py-4 px-4">
+                                        <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
-                </div>
+                                    </div>
 
-            </div>
+                                </Link>
+                            )}
+
+                        </div>
+                    }
+
+
+
+                
+
         </div>
     )
 
@@ -180,6 +201,8 @@ export const getStaticProps = async ({ params }) => {
             content['img'] = result.data().img;
             content['name'] = result.data().name;
             content['route'] = result.data().route;
+            content['brand'] = result.data().brand;
+            content['type'] = result.data().type;
             content['desc'] = result.data().desc;
             content['cat'] = result.data().cat;
             content['volume'] = result.data().volume;
@@ -190,6 +213,5 @@ export const getStaticProps = async ({ params }) => {
 
     }
 }
-
-TonicProducts.Layout = Layout
-export default TonicProducts
+HairProducts.Layout = Layout
+export default HairProducts

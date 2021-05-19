@@ -1,9 +1,9 @@
 import { React, useState,useEffect } from 'react'
-import Button from '../../components/Button' 
-import Layout from '../../layout/layout'
+import Button from '../../../components/Button'
+import Layout from '../../../layout/layout'
 import Link from 'next/link'
-import Product from '../../components/Product'
-import { loadDB } from '../../config/firebase'
+import Product from '../../../components/Product'
+import { loadDB } from '../../../config/firebase'
 
 
 export const HairCare = (props) => {
@@ -12,15 +12,18 @@ export const HairCare = (props) => {
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`All`)
+    const [aim, setAim] = useState(`Razors`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
+    
 
     useEffect(() => {
         setTimeout(() => {
             if(aim){
-                let firebase = loadDB().firestore().collection("hair")
-                firebase.where('cat', '==', `${aim}`)
+                let firebase = loadDB();
+                firebase.firestore()
+                    .collection("hair")
+                    .where('cat', '==', `${aim}`)
                     .onSnapshot(snap => {
                         const desc = snap.docs.map(doc => ({
                             id: doc.id,
@@ -69,6 +72,7 @@ export const HairCare = (props) => {
                                     </div>
 
                                 </div>
+
                                     <div className="w-full h-screen my-8 shadow-md bg-gray-300 rounded-lg">
                                         <h1 className="text-2xl font-italic px-12 py-4">Newsletter</h1>
                                         <h2 className="text-sm px-12">Get the latest updates, news and product offers via email</h2>
@@ -99,7 +103,7 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                                <Button buttons={["All", "Hair Wax", "Hair Spray", "Gum Gel", "Serum", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
+                                        <Button buttons={["All", "Beard Oil","Razors", "After Shave"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>
@@ -172,10 +176,11 @@ export const HairCare = (props) => {
 }
 
 
-export const getStaticProps = async ({params}) => {
+export const getStaticProps = async () => {
     let result = await new Promise((resolve, reject) => {
         loadDB().firestore()
             .collection('hair')
+            .where('type','==','beardshave')
             .get()
             .then(snapshot => {
                 let data = []

@@ -220,15 +220,8 @@ and (orientation: landscape) {
 
 
 
-  .msg{
-    font-size: 90px;
-    font-weight: bold;
-    background: linear-gradient(to right, #7927b2, #fb3182);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    max-width: 350px;
-    text-transform: uppercase;
-    line-height: .77;
+.bgcontainer{
+    min-height: 77vh;
   }
 
   .bghero{

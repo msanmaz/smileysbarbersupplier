@@ -86,6 +86,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-top:3.5rem;
     }
 
+.bgcontainer{
+    min-height: 85vh;
+  }
+
 
 }
 
@@ -132,6 +136,10 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+
+.bgcontainer{
+    min-height: 85vh;
+  }
 }
 
 /* Portrait */
@@ -190,6 +198,10 @@ and (orientation: portrait) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+
+.bgcontainer{
+    min-height: 71vh;
+  }
 }
 
 /* Landscape */
@@ -208,17 +220,6 @@ and (orientation: landscape) {
 
 
 
-.container{
-    width: 90%;
-    height: 400px;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .msg{
     font-size: 90px;
     font-weight: bold;
@@ -231,8 +232,8 @@ and (orientation: landscape) {
   }
 
   .bghero{
-    background: rgb(121,39,178);
-    background: linear-gradient(90deg, rgba(121,39,178,1) 15%, rgba(251,49,130,1) 94%);
+background: rgb(114,103,121);
+background: linear-gradient(90deg, rgba(114,103,121,1) 29%, rgba(18,15,15,1) 95%);
       }
 
   

@@ -23,9 +23,7 @@ export default function Hero() {
     };
 
     return (
-            <div className="relative pt-20 pb-20 bghero" style={{
-                minHeight: "85vh"
-            }}>
+            <div className="relative pt-20 pb-20 bghero bgcontainer">
                 <div className="absolute w-full h-full bg-center bg-cover"
              >
 
@@ -74,7 +72,7 @@ export default function Hero() {
 
                     <div className="flex w-full md:w-2/6 md:mt-16 mt-20 px-8 md:mx-10 float-left">
                         <div className="flex w-full flex-col align-center">
-                            <h1 className="font-extrabold font-sans text-2xl md:text-7xl dark:text-white text-white">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-300 to-gray-500">BARBER</span>  SUPPLIES</h1>
+                            <h1 className="font-extrabold font-sans text-2xl md:text-7xl dark:text-white text-white">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-red-500">BARBER</span>  SUPPLIES</h1>
                             <p className="font-medium font-sans text-lg md:text-2xl dark:text-white text-white"> Made by Barbers, Made to work</p>
                             <p className="font-medium font-sans text-sm md:text-xl dark:text-white text-white">For professional barber and personal care products</p>
             <Link href="products">

@@ -4,7 +4,7 @@ export default function Categories() {
 
     return (
         <>
-            <div className="px-4 relative isix md:mt-28 mb-20">
+            <div className="px-4 relative isix md:mt-20 mb-20">
                 <h2 className="md:text-3xl text-2xl font-bold flex justify-center text-black dark:text-white">Products</h2>
 
 

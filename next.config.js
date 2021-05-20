@@ -1,6 +1,10 @@
 module.exports = {
     trailingSlash: true,
+   images: {
+    domains: ['firebasestorage.googleapis.com'],
+  },
     module: {
+
       loaders: [
         {
           test: /\.css$/,
@@ -9,3 +13,6 @@ module.exports = {
       ],
     },
   }
+
+
+  

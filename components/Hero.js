@@ -55,17 +55,21 @@ export default function Hero() {
                                 <img src="/totexgum.png" />
                             </div>
                             <div className="mt-5">
+                                <img src="/arkoshavingcreamnobg.png" />
+                            </div>
+                            <div className="mt-5">
                                 <img src="/shampoo.png" />
                             </div>
                             <div className="mt-5">
                                 <img src="/totexspray.png" />
                             </div>
                             <div className="mt-5">
-                                <img src="/absolutebeardoil.png" />
+                                <img src="/arkoaftershavenobg.png"/>
                             </div>
                             <div className="mt-5">
-                                <img src="/arkoshavingcreamnobg.png" />
+                                <img src="/absolutebeardoil.png" />
                             </div>
+
                         </Carousel>
 
                     </div>

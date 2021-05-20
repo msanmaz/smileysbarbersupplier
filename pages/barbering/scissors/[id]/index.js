@@ -1,13 +1,16 @@
-import { loadDB } from '../../config/firebase'
-import Layout from '../../layout/layout'
+import { loadDB } from '../../../../config/firebase'
+import Layout from '../../../../layout/layout'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Product from '../../components/Product'
+import Product from '../../../../components/Product'
 const HairProducts = (props) => {
     const [products, setProducts] = useState();
     const [loading, setLoading] = useState(true);
-
+    const max = 15;
+    const min = 10;
+    const rando = Math.floor(Math.random() * max) + 1;
+    const rand = Math.floor(Math.random() * min) + 1;
     useEffect(() => {
 
         let firebase = loadDB();
@@ -35,7 +38,7 @@ const HairProducts = (props) => {
                     <ol class="flex text-grey-dark">
                         <Link href='/'><li class="text-blue font-bold">Home</li></Link>
                         <li><span class="mx-2">/</span></li>
-                        <Link href={`/products`} as={`/products`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
+                        <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
                         <li><span class="mx-2">/</span></li>
                         <li>{props.name}</li>
                     </ol>
@@ -48,7 +51,7 @@ const HairProducts = (props) => {
                         <div className="md:my-24 my-4">
 
                             <div className="w-full">
-                                <Link href={`/products`} as={`/products`}>
+                                <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}>
                                     <div
                                         class="p-4 md:pt-20 pt-32 cursor-pointer w-full">
                                         <h3 class="text-lg font-semibold inline-flex">
@@ -100,6 +103,7 @@ const HairProducts = (props) => {
                                     </div>
 
 
+
                                 </div>
 
 
@@ -125,7 +129,7 @@ const HairProducts = (props) => {
                 </div>
                     {loading ? "Loading Component Will be gone in 2 sec" :
                         <div className="flex flex-wrap md:px-4">
-                            {products.slice(1,7).map(product =>
+                            {products.slice(rand,rando).map(product =>
                                 <Link href="/products/[id]" as={'/products/' + product.id}>
                                     <div className="w-1/2 md:w-1/7 py-4 px-4">
                                         <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />

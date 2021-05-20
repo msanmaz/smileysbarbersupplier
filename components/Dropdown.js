@@ -115,7 +115,7 @@ const Dropdown = (props) => {
                   </div>
                 </Link>
                 <Link
-                  href={`/${props.url}/${props.cat6url}`} as={`/${props.url}/${props.cat6url}`}
+                  href={`/${props.url}`} as={`/${props.url}`}
                   className={
                     "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1  text-gray-800" 
                   }
@@ -125,16 +125,7 @@ const Dropdown = (props) => {
                   {props.cat6}
                   </div>
                 </Link>
-                
-                <Link
-                  href={`/${props.url}/${props.cat7url}`} as={`/${props.url}/${props.cat7url}`}
-
-                  onClick={e => e.preventDefault()}
-                >
-                  <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
-                  {props.cat7}
-                  </div>
-                </Link>
+     
 
 
    

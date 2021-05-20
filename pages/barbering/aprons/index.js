@@ -7,12 +7,12 @@ import { loadDB } from '../../../config/firebase'
 import { useRouter } from 'next/router'
 
 
-export const HairCare = (props) => {
+export const Aprons = (props) => {
 
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`Electrical`)
+    const [aim, setAim] = useState(`Aprons`)
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState()
 
@@ -203,5 +203,5 @@ export const getStaticProps = async () => {
 }
 
 
-export default HairCare
-HairCare.Layout = Layout;
+export default Aprons
+Aprons.Layout = Layout;

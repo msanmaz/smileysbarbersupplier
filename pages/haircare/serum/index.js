@@ -12,7 +12,7 @@ export const HairCare = (props) => {
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`Hair Tonic`)
+    const [aim, setAim] = useState(`Serum`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
     

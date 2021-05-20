@@ -16,7 +16,7 @@ export default function Navbar() {
 
     return (
         <div className="fixed z-50 w-full">
-            <div className={` w-full px-6 flex items-center lg:py-0 py-2 bg-black`}>
+            <div className={` w-full md:px-6 px-0 flex items-center lg:py-0 py-2 bg-black`}>
                 <div className="flex my-4">
                     <Link href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" className="w-20 h-10 animate md:flex" version="1.2" viewBox="0 0 375 375">
@@ -99,7 +99,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                <div className="justify-center pt-2 relative mx-auto text-gray-600 md:flex">
+                <div className="justify-center pt-2 relative md:mx-auto text-gray-600 md:flex">
                     <SearchBar/>
                 </div>
 

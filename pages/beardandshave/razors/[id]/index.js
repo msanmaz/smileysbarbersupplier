@@ -84,8 +84,7 @@ const HairProducts = (props) => {
                                 <div className="md:pr-20 my-2 px-4 font-light"> In Stock</div>
 
                             </div>
-                            <div className="px-4 text-xl">€14,95 Retail Price (Incl. VAT)</div>
-
+             
 
 
                             <div className="py-12 space-y-4">
@@ -100,10 +99,6 @@ const HairProducts = (props) => {
                                         {props.desc}
                                     </div>
 
-                                    <div className="flex w-full text-lg font-semibold py-4 px-4">Usage:</div>
-                                    <div className="font-light px-4">
-                                        Totex Hair Styling Spray is a reworkable volumizing spray which gives a matte finish with lightweight texture and separation. It can be applied direct to hair or rubbed through with your hands. Suitable for all hair types. Get Tot-ex!
-</div>
 
 
                                 </div>

@@ -9,17 +9,9 @@ const Contact = () => {
                 <div className="flex flex-wrap">
 
 
-                    <div className="md:w-2/5 w-full">
-                        <div className="text-2xl text-black font-semibold">Help and Customer Service</div>
-                    </div>
-
-
-
-
-
                     <div className="md:w-3/5 w-full">
-                        <div class="min-h-screen px-4 p-0 sm:p-12">
-                            <div class="mx-auto rounded-lg max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
+                        <div class="px-4 p-0 ">
+                            <div class="mx-auto rounded-lg max-w-2xl px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
                                 <h1 class="text-2xl font-bold mb-8">Price Enquiry Form</h1>
                                 <form id="form" novalidate>
                                     <div class="relative z-0 w-full mb-5">
@@ -123,14 +115,46 @@ const Contact = () => {
                                     <button
                                         id="button"
                                         type="button"
-                                        class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-pink-500 hover:bg-pink-600 hover:shadow-lg focus:outline-none"
+                                        class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-black hover:bg-gray-600 hover:shadow-lg focus:outline-none"
                                     >
-                                        Toggle Error
+                                        Send Request
       </button>
                                 </form>
                             </div>
                         </div>
+                        <div className="flex flex-wrap justify-center my-12">
+                        <div className="text-5xl text-black font-bold px-4 py-4">For Our Price information and sales please contact us via e-mail or phone</div>
+                        <div className="text-base text-black font-bold px-4">We supply the highest quality products at the lowest prices from all around the world, which allows us to source directly from the manufacturer to keep prices to you as low as possible.</div>
+
+                        </div>
+
+
                     </div>
+
+
+                    <div className="md:w-2/5 w-full px-4 py-12">
+                        <div className="text-2xl text-black font-semibold py-4">Help and Customer Service</div>
+                        <div className="text-xl text-black font-normal">Become a retailer</div>
+                        <div className="text-base text-black font-light">To apply for a business account, please register by filling in the registration form. Once we have your business information, we will review and respond as quickly as possible.</div>
+                        <div className="text-2xl text-black font-bold py-4">General Terms</div>
+                        <div className="text-base text-black font-light">In these General Terms and Conditions the following terms shall have the following meanings, except where stated otherwise:
+                        General Terms and Conditions: these general terms and conditions.
+                        Day: calendar day.
+                        Smiley Barber Supplier: the company Smiley Barber Supplier, located at 118 Sundrive Rd. Kimmage, Dublin and registered with the Trade Register of the Ireland Chamber of Commerce under number 60281065. VAT identification number IE002245803B27.
+                        Customer: every legal person or individual, acting in the conduct of a business or profession, who would like to enter into a contract with Smiley Barber Suppliers
+                        Website: name of the website of Smiley Barber Supplier, being www.smileybarbersupplier.com.</div>
+                        <div className="text-2xl text-black font-bold py-4">Offers And Proposal</div>
+                        <div className="text-base text-black font-light">1. All offers/proposals qualify as a non-committal offer and/or proposal and can always be revoked, also in case it includes a term for acceptance. Proposals/offers can also be revoked in writing within seven days after receipt by Smiley Barber Supplier, in which case no agreement will be concluded.
+2. Offers/proposals can only be accepted in writing (including an acceptance by telefax or those made through electronic means). However, Smiley Barber Supplier is entitled to accept an oral acceptance as if this would have been done in writing. In case the customer places an order on the website of Smiley Barber Supplier, this order is final in case the customer clicks on the order button or receives a confirmation of his order by e-mail. Once the customer of Smiley Barber Suppliers receives a confirmation by e-mail, a binding agreement between parties is established.
+3. Information that is included in advertising material in the broadest sense of the word, such as catalogues, pricing lists, brochures and websites of third parties, shall never be binding for Smiley Barber Supplier
+4. Except for written agreements stating explicitly otherwise, specifications of size, weight and other information are estimates, as accurate and reliable as possible.</div>
+                    </div>
+
+
+
+
+
+
 
 
                 </div>

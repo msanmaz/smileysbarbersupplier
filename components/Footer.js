@@ -104,19 +104,19 @@ function Footer() {
             <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Products:</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link href="/portfoy"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Totex</p></Link>
+                <Link href="/brands/Totex"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Totex</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
+                <Link href="/brands/Arko"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Permasharp</p></Link>
+                <Link href="/brands/Absolute"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Absolute</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Derby</p></Link>
+                <Link href="/brands/Barbicide"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Barbicide</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/kiralik"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
+                <Link href="/haircare"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Hair&Care</p></Link>
               </li>
 
 
@@ -131,7 +131,7 @@ function Footer() {
                 <Link href="/" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Home Page</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/about" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Products</p></Link>
+                <Link href="/products" ><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Products</p></Link>
               </li>
 
               <li className="mb-2">

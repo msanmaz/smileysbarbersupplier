@@ -651,11 +651,6 @@ video {
   background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
 }
 
-.bg-pink-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
-}
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -684,11 +679,6 @@ video {
 .hover\:bg-blue-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
-}
-
-.hover\:bg-pink-600:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(219, 39, 119, var(--tw-bg-opacity));
 }
 
 .focus\:bg-indigo-600:focus {
@@ -1065,6 +1055,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 2.7rem;
+  line-height: 1;
+}
+
 .leading-7 {
   line-height: 1.75rem;
 }
@@ -1139,6 +1134,11 @@ video {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .my-28 {
@@ -1267,8 +1267,8 @@ video {
   max-width: 20rem;
 }
 
-.max-w-md {
-  max-width: 28rem;
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-full {
@@ -2352,10 +2352,6 @@ input:focus ~ label,
 
   .sm\:h-8 {
     height: 2rem;
-  }
-
-  .sm\:p-12 {
-    padding: 3rem;
   }
 
   .sm\:px-6 {

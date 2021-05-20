@@ -13,7 +13,7 @@ export default function Categories() {
 
 
                     <Link href="/barbering/hygiene">
-                    <div className="md:w-3/0 w-full hidden cursor-pointer c-card  md:flex grid-1 px-4 md:px-auto">
+                    <div className="md:w-3/0 w-full hidden cursor-pointer catcat  md:flex grid-1 px-4 md:px-auto">
                         <div className="flex mt-4 md:h-half flex-1 p-4 rounded-lg bg-center bg-cover h-screen" style={{ backgroundImage: "url(https://cdn.webshopapp.com/shops/266822/themes/172315/v/877/assets/homepage-banner-1-image.jpg?20210313143846?20200422160649)"}}>
                             <div className="flex items-stretch">
 
@@ -118,7 +118,7 @@ export default function Categories() {
                             </div>
 
                             <Link href="/beardandshave/razors">
-                            <div className="md:w-1/3 w-full flex p-4 cursor-pointer items-stretch h-screen md:h-cate ">
+                            <div className="md:w-1/3 w-full catcat flex p-4 cursor-pointer items-stretch h-screen md:h-cate ">
                                 <div className="bg-razor bg-cover bg-center flex relative w-full rounded-lg">
                                     <div class="absolute rounded-lg bottom-0 mt-20 right-0 top-1 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
                                     <div class="absolute bottom-1 left-0 mx-5 mt-2 flex justify-between items-center">

@@ -7,7 +7,10 @@ import Product from '../../../../components/Product'
 const HairProducts = (props) => {
     const [products, setProducts] = useState();
     const [loading, setLoading] = useState(true);
-
+    const max = 15;
+    const min = 10;
+    const rando = Math.floor(Math.random() * max) + 1;
+    const rand = Math.floor(Math.random() * min) + 1;
     useEffect(() => {
 
         let firebase = loadDB();
@@ -126,7 +129,7 @@ const HairProducts = (props) => {
                 </div>
                     {loading ? "Loading Component Will be gone in 2 sec" :
                         <div className="flex flex-wrap md:px-4">
-                            {products.slice(1,7).map(product =>
+                            {products.slice(rand,rando).map(product =>
                                 <Link href="/products/[id]" as={'/products/' + product.id}>
                                     <div className="w-1/2 md:w-1/7 py-4 px-4">
                                         <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />

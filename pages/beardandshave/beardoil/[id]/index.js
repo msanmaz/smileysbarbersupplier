@@ -38,7 +38,7 @@ const HairProducts = (props) => {
                     <ol class="flex text-grey-dark">
                         <Link href='/'><li class="text-blue font-bold">Home</li></Link>
                         <li><span class="mx-2">/</span></li>
-                        <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
+                        <Link href={`/beardandshave/${props.route}`} as={`/beardandshave/${props.route}`}><li class="text-blue font-bold cursor-pointer">{props.cat}</li></Link>
                         <li><span class="mx-2">/</span></li>
                         <li>{props.name}</li>
                     </ol>
@@ -89,7 +89,6 @@ const HairProducts = (props) => {
                                 <div className="md:pr-20 my-2 px-4 font-light"> In Stock</div>
 
                             </div>
-             
 
 
                             <div className="py-12 space-y-4">
@@ -103,6 +102,7 @@ const HairProducts = (props) => {
                                     <div className="font-light px-4">
                                         {props.desc}
                                     </div>
+
 
 
 

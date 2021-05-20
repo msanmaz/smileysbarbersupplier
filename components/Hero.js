@@ -1,6 +1,8 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 export default function Hero() {
     const responsive = {
@@ -52,22 +54,22 @@ export default function Hero() {
                             responsive={responsive}
                         >
                             <div className="mt-5">
-                                <img src="/totexgum.png" />
+                                <Image src="/totexgum.png" width={300} height={300} />
                             </div>
                             <div className="mt-5">
-                                <img src="/arkoshavingcreamnobg.png" />
+                                <Image src="/arkoshavingcreamnobg.png" width={300} height={300}  />
                             </div>
                             <div className="mt-5">
-                                <img src="/shampoo.png" />
+                                <Image src="/shampoo.png" width={300} height={300}  />
                             </div>
                             <div className="mt-5">
-                                <img src="/totexspray.png" />
+                                <Image src="/totexspray.png" width={300} height={300}  />
                             </div>
                             <div className="mt-5">
-                                <img src="/arkoaftershavenobg.png"/>
+                                <Image src="/arkoaftershavenobg.png" width={300} height={300} />
                             </div>
                             <div className="mt-5">
-                                <img src="/absolutebeardoil.png" />
+                                <Image src="/absolutebeardoil.png" width={300} height={300} />
                             </div>
 
                         </Carousel>

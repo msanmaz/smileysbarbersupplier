@@ -1414,10 +1414,6 @@ video {
   padding-top: 10rem;
 }
 
-.pb-48 {
-  padding-bottom: 12rem;
-}
-
 .placeholder-gray-300::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgba(209, 213, 219, var(--tw-placeholder-opacity));

@@ -52,10 +52,10 @@ export default function Home() {
       </div>
       {loading ? "Loading Component Will be gone in 2 sec" :
         <div className="flex flex-wrap px-4">
-          {products.map(product =>
-            <Link href="/products/[id]" as={'/products/' + product.id}>
+          {products.map((product,index) =>
+            <Link href="/products/[id]" as={'/products/' + product.id} key={index}>
               <div className="w-1/2 md:w-1/7 py-4 px-4">
-                <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
+                <Product  brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
               </div>
 

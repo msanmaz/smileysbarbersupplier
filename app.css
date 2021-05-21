@@ -87,7 +87,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
 .bgcontainer{
-    min-height: 85vh;
+    min-height: 85vh!important;
   }
 
 
@@ -184,6 +184,9 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+    .bgcontainer{
+    min-height: 71vh!important;
+  }
 }
 
 /* Portrait */
@@ -199,9 +202,7 @@ and (orientation: portrait) {
         width:13rem;
     }
 
-.bgcontainer{
-    min-height: 71vh;
-  }
+
 }
 
 /* Landscape */

@@ -78,7 +78,9 @@ const HairProducts = (props) => {
                             <div className="px-4  rf flex py-4 text-xl"> {props.cat}</div>
                             <div className="px-4 rf font-extrabold text-2xl">{props.name}</div>
                             <div className="md:float-right px-4 py-4">
+                            <Link href="/contact">
                                 <button className="py-2 md:px-6 px-4 bg-red-500 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-red-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Price Enquiry </button>
+                                </Link>
                             </div>
 
                             <div className="flex flex-nowrap md:flex-wrap justify-between mt-2 md:mt-10 w-full md:w-1/2">

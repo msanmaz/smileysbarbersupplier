@@ -93,7 +93,7 @@ function Footer() {
               </Link>
             </div>
             <div className="text-sm text-gray-600">
-              <a href="mailto:info@attilahomes.com" className="text-gray-600 dark:text-white hover:text-gray-900 hover:underline transition duration-150 ease-in-out">info@smileysbarbersupplier.com</a> 
+              <a href="mailto:admin@smileysbarbersupplies.ie" className="text-gray-600 dark:text-white hover:text-gray-900 hover:underline transition duration-150 ease-in-out">admin@smileysbarbersupplies.ie</a> 
             </div>
           </div>
 

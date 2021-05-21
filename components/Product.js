@@ -10,8 +10,8 @@ const Product = (props) => {
 
                         <div class="w-full">
                             <div class="c-card block cursor-pointer bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
-                                <div class="relative overflow-hidden">
-                                    <Image width={400} height={400} src={props.image} alt="Picture Of Product" />
+                            <div class="relative pb-48 overflow-hidden">
+                                    <img class="absolute inset-0 h-full w-full object-cover" src={props.image} alt="Product Image" />
                                 </div>
                                 <div class="p-4">
                                     <span class="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 rounded-full font-semibold uppercase tracking-wide text-xs">{props.brand}</span>

@@ -54,22 +54,22 @@ export default function Hero() {
                             responsive={responsive}
                         >
                             <div className="mt-5">
-                                <Image src="/totexgum.png" width={300} height={300} />
+                                <img src="/totexgum.png" width={300} height={300} />
                             </div>
                             <div className="mt-5">
-                                <Image src="/arkoshavingcreamnobg.png" width={300} height={300}  />
+                                <img src="/arkoshavingcreamnobg.png" width={300} height={300}  />
                             </div>
                             <div className="mt-5">
-                                <Image src="/shampoo.png" width={300} height={300}  />
+                                <img src="/shampoo.png" width={300} height={300}  />
                             </div>
                             <div className="mt-5">
-                                <Image src="/totexspray.png" width={300} height={300}  />
+                                <img src="/totexspray.png" width={300} height={300}  />
                             </div>
                             <div className="mt-5">
-                                <Image src="/arkoaftershavenobg.png" width={300} height={300} />
+                                <img src="/arkoaftershavenobg.png" width={300} height={300} />
                             </div>
                             <div className="mt-5">
-                                <Image src="/absolutebeardoil.png" width={300} height={300} />
+                                <img src="/absolutebeardoil.png" width={300} height={300} />
                             </div>
 
                         </Carousel>

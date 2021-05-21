@@ -7,7 +7,7 @@
     "dev-css": "cross-env NODE_ENV=development tailwindcss build app.css -o styles.css",
     "next-dev": "next dev",
     "dev": "concurrently \"npm run next-dev\" \"npm run dev-css\"",
-    "next-build": "next build",
+    "next-build": "next build && next export",
     "build": "concurrently \"npm run next-build\" \"npm run build-css\"",
     "start": "NODE_ENV=development node server.js"
   },

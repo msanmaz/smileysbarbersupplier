@@ -11,6 +11,7 @@ export default function Layout({ children }) {
         <>
 <Head>
 <title>Smileys Barber Supplies</title>
+
 <meta name="title" content="Smileys Barber Supplies"/>
 <meta name="description" content="We are a professional barber shop and barber equipment supplier, Our products are hair care items, shaving, barbering. We sell barbering products from brands such as Totex, Arko, Absolute, PermaSharp, Barbicide. We also have a range of professional clippers"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

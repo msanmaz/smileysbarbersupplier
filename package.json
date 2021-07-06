@@ -6,7 +6,7 @@
     "build-css": "cross-env NODE_ENV=production tailwindcss build app.css -o styles.css",
     "dev-css": "cross-env NODE_ENV=development tailwindcss build app.css -o styles.css",
     "next-dev": "next dev",
-    "export": "next export",
+    "export": "next export -o build/",
     "dev": "concurrently \"npm run next-dev\" \"npm run dev-css\"",
     "next-build": "next build",
     "build": "concurrently \"npm run next-build\" \"npm run build-css\""

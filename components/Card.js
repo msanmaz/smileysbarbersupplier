@@ -46,7 +46,6 @@ export default function Card(props) {
     </div>
 
     <div className="col-span-3 row-span-1">
-     <div className="px-4 my-2">€ --,--</div>
      <div className="flex flex-col float-right px-4 ">
          <p className="font-semibold font-mono">Category</p>
          <div className="ml-10">{props.cat}</div>

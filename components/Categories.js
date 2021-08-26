@@ -24,7 +24,7 @@ export default function Categories() {
 
 
                                 <main class="p-2 z-10">
-                                <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Hygiene</a>
+                                <a href="#" class="text-xs bg-black text-white px-5 py-2 uppercase hover:bg-white hover:text-yellow-400 transition ease-in-out duration-500">Hygiene</a>
 
                               
                                 </main>
@@ -49,7 +49,7 @@ export default function Categories() {
                                     </div>
                                     <main class="p-5 z-10">
 
-                                            <div className="cursor-pointer text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">
+                                            <div className="cursor-pointer text-xs bg-black text-white px-5 py-2 uppercase hover:bg-white hover:text-yellow-400 transition ease-in-out duration-500">
                                                 Wax
                                                 </div>
 
@@ -71,7 +71,7 @@ export default function Categories() {
                                     </div>
                                     <main class="p-5 z-10">
 
-                                        <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Beard & Shave</a>
+                                        <a href="#" class="text-xs bg-black text-white px-5 py-2 uppercase hover:bg-white hover:text-yellow-400  transition ease-in-out duration-500">Beard & Shave</a>
 
                                     </main>
 
@@ -89,7 +89,7 @@ export default function Categories() {
                                     </div>
                                     <main class="p-5 z-10">
 
-                                        <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Hair Care</a>
+                                        <a href="#" class="text-xs bg-black text-white px-5 py-2 uppercase hover:bg-white hover:text-yellow-400  transition ease-in-out duration-500">Hair Care</a>
 
                                     </main>
 
@@ -109,7 +109,7 @@ export default function Categories() {
                                     </div>
                                     <main class="p-5 z-10">
 
-                                        <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Electrical Shavers</a>
+                                        <a href="#" class="text-xs bg-black text-white px-5 py-2 uppercase hover:bg-white hover:text-yellow-400  transition ease-in-out duration-500">Electrical Shavers</a>
 
                                     </main>
 
@@ -127,7 +127,7 @@ export default function Categories() {
                                     </div>
                                     <main class="p-5 z-10">
 
-                                        <a href="#" class="text-xs bg-green-500 text-white px-5 py-2 uppercase hover:bg-white hover:text-indigo-600 transition ease-in-out duration-500">Razors</a>
+                                        <a href="#" class="text-xs bg-black text-white px-5 py-2 uppercase hover:bg-white hover:text-yellow-400  transition ease-in-out duration-500">Razors</a>
 
                                     </main>
 

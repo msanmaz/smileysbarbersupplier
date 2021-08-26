@@ -30,7 +30,7 @@ export default function Hero() {
 
 
 
-<div className="relative md:top-16 w-full top-20 md:w-2/3 float-right">
+<div className="relative md:top-16 w-full top-12 md:w-2/3 float-right">
                         <Carousel
                             additionalTransfrom={0}
                             showDots={false}
@@ -51,37 +51,88 @@ export default function Hero() {
                             renderButtonGroupOutside={false}
                             renderDotsOutside
                             responsive={responsive}
+                            slidesToSlide={3}
                         >
+
+    
                             <div className="mt-5">
-                                <img src="/totexgum.png" width={300} height={300} />
+                                <img src="/matte_finish_pomade-removebg-preview.png" width={300} height={300} />
                             </div>
                             <div className="mt-5">
-                                <img src="/arkoshavingcreamnobg.png" width={300} height={300}  />
-                            </div>
-                            <div className="mt-5">
-                                <img src="/shampoo.png" width={300} height={300}  />
-                            </div>
-                            <div className="mt-5">
-                                <img src="/totexspray.png" width={300} height={300}  />
-                            </div>
-                            <div className="mt-5">
-                                <img src="/arkoaftershavenobg.png" width={300} height={300} />
-                            </div>
-                            <div className="mt-5">
-                                <img src="/absolutebeardoil.png" width={300} height={300} />
+                                <img src="/aqua_wax_4_-removebg-preview.png" width={300} height={300} />
                             </div>
 
+                            <div className="mt-5">
+                                <img src="/aqua_wax_5-removebg-preview.png" width={300} height={300} />
+                            </div>
+
+                            <div className="mt-5">
+                                <img src="/aqua_wax_6__2-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="mt-5">
+                                <img src="/aqua_wax_7_-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="mt-5">
+                                <img src="/aqua_wax_8_-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="mt-5">
+                                <img src="/aqua_wax_fiber_-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="mt-5">
+                                <img src="/classic_pomade-removebg-preview (1).png" width={300} height={300} />
+                            </div>
+                            <div className="mt-5">
+                                <img src="/matte_wax-removebg-preview.png" width={800} height={300} />
+                            </div>
+                            <div className="-mt-4">
+                                <img src="/Volcano350-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-4">
+                                <img src="/waterfall350-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="mt-12">
+                                <img src="/350ml_cologne_Çalışma_Yüzeyi_1-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/keratin_hair_conditioner-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/milky_hair_conditioner-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/herbal_hair_conditioner-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/extreme-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/fresh_black-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/menınvısıble-removebg-preview.png" width={300} height={300} />
+                            </div>
+
+
+                            <div className="mt-5">
+                                <img src="/BandidoBeardShampoo250ml_1400x-removebg-preview.png" width={300} height={300} />
+                            </div>
+                            <div className="mt-5">
+                                <img src="/beard_oil2-removebg-preview (1).png" width={600} height={300} />
+                            </div>
+                            <div className="-mt-6">
+                                <img src="/hair_tonıc-removebg-preview.png" width={300} height={300} />
+                            </div>
                         </Carousel>
 
                     </div>
 
-                    <div className="flex w-full md:w-2/6 md:mt-16 mt-20 px-8 md:mx-10 float-left">
+                    <div className="flex w-full md:w-2/6 md:mt-32 px-8  md:mx-10 float-left">
                         <div className="flex w-full flex-col align-center">
-                            <h1 className="font-extrabold font-sans text-2xl md:text-7xl dark:text-white text-white">SMILEYS <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-red-500">BARBER</span>  SUPPLIES</h1>
+                            <h1 className="font-extrabold headings text-2xl md:text-4xl dark:text-white text-black">SMILEYS <span className="bg-clip-text text-white">BARBER</span>  SUPPLIES</h1>
                             <p className="font-medium font-sans text-lg md:text-2xl dark:text-white text-white"> Made by Barbers, Made to work</p>
-                            <p className="font-medium font-sans text-sm md:text-xl dark:text-white text-white">For professional barber and personal care products</p>
+                            <p className="font-medium font-sans text-sm md:text-xl dark:text-white text-black">For professional barber and personal care products</p>
             <Link href="products">
-            <button className="py-2 md:px-4 px-0 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            <button className="py-2 md:px-4 px-0 bg-black text-white font-semibold rounded-lg shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75">
                                 Discover Our Collections
 </button>      
             </Link>

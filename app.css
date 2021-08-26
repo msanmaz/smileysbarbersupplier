@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 .animate{
     @apply transition duration-500 ease-in-out transform;
 }
@@ -13,6 +14,10 @@
 }
 .rf{
     font-family: 'Roboto', sans-serif;
+}
+
+.headings{
+    font-family: 'Rampart One', cursive;
 }
 
 .animate:hover{
@@ -185,7 +190,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         width:13rem;
     }
     .bgcontainer{
-    min-height: 71vh!important;
+    min-height: 65vh!important;
   }
 }
 
@@ -227,7 +232,7 @@ and (orientation: landscape) {
 
   .bghero{
 background: rgb(114,103,121);
-background: linear-gradient(90deg, rgba(114,103,121,1) 29%, rgba(18,15,15,1) 95%);
+background: linear-gradient(90deg, rgb(159,115,55) 29%, rgb(240,228,149) 95%);
       }
 
   

@@ -6,13 +6,13 @@ import Card from '../../../components/Card'
 import { loadDB } from '../../../config/firebase'
 import Product from '../../../components/Product'
 
-export const HairCare = (props) => {
+export const Bandido = (props) => {
 
 
     const printButtonLabel = (event) => {
         setAim(event.target.name)
     };
-    const [aim, setAim] = useState(`Absolute`)
+    const [aim, setAim] = useState(`Bandido`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
     
@@ -103,7 +103,7 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                        <Button buttons={["All", "Absolute", "Arko", "Barbicide","Bandido" , "Totex", "Permasharp"]} doSomethingAfterClick={printButtonLabel} />
+                                        <Button buttons={["All", "Absolute", "Arko", "Barbicide","Bandido" ,"Totex", "Permasharp"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>
@@ -201,5 +201,5 @@ export const getStaticProps = async () => {
 }
 
 
-export default HairCare
-HairCare.Layout = Layout;
+export default Bandido
+Bandido.Layout = Layout;

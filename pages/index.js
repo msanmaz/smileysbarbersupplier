@@ -7,7 +7,8 @@ import Layout from '../layout/layout'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Product from '../components/Product'
-
+import FadeIn from 'react-fade-in';
+import Image from '../components/Image'
 
 export default function Home() {
   const printButtonLabel = (event) => {
@@ -40,6 +41,44 @@ export default function Home() {
   return (
     <div>
       <Hero />
+
+            <div className="flex flex-row mt-2 md:pl-32 md:pr-28">
+              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+                <img
+                  src="/andis.jpeg"
+                  alt="Client 01"
+                  width={124}
+                  height={24} />
+              </div>
+              <div className="w-full lg:w-1/5 px-2 my-2 text-center" >
+                <img
+                  src="/Arkoamblem.png"
+                  alt="Client 02"
+                  width={120}
+                  height={50} />
+              </div>
+              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+              <img src="/Bandidohh-removebg-preview.png" width={140} height={300} />
+
+              </div>
+
+              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+                <img
+                  src="/totexamlbme.png"
+                  alt="Client 03"
+                  width={100}
+                  height={39} />
+              </div>
+              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+                <img
+                  src="/wahllogo.png"
+                  alt="Client 04"
+                  width={80}
+                  height={20} />
+              </div>
+
+        
+            </div>
       <Categories />
       <div className="flex justify-center my-4">
         <p className="font-bold text-2xl md:text-3xl">Recommended Products</p>

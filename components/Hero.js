@@ -24,7 +24,7 @@ export default function Hero() {
     };
 
     return (
-            <div className="relative pt-20 pb-20 bghero bgcontainer">
+            <div className="relative pt-20 pb-20 bghero bgcontainer rounded-md">
                 <div className="absolute w-full h-full bg-center bg-cover"
              >
 
@@ -149,7 +149,7 @@ export default function Hero() {
 
 
                 <div
-                        className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+                        className="hidden top-auto bottom-0 left-0 right-0 w-full md:block md:absolute pointer-events-none overflow-hidden"
                         style={{ transform: "translateZ(0)" }}
                     >
                         <svg

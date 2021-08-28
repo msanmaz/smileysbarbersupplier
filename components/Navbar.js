@@ -26,7 +26,7 @@ export default function Navbar() {
 
     return (
         <div className="fixed z-50 w-full">
-            <div className={` w-full md:px-6 px-0 flex items-center lg:py-4 pt-12 bg-black`}>
+            <div className={` w-full md:px-6 px-0 flex items-center navh bg-black`}>
                 <div className="flex my-4">
                     <Link href="/">
             <img src="/logosbs1.2.png" className="fixed h-32 -top-8 -left-4 md:-left-0"/>
@@ -122,15 +122,7 @@ export default function Navbar() {
                   </Link>
   
   
-                  <Link
-                    href={`/brands/Absolute`} as={`/brands/Absolute`}
-  
-                    onClick={e => e.preventDefault()}
-                  >
-                    <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
-                    Absolute
-                    </div>
-                  </Link>
+
 
                   <Link
                     href={`/brands/Barbicide`} as={`/brands/Barbicide`}

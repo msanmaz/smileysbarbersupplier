@@ -58,7 +58,7 @@ export default function Home() {
                   height={50} />
               </div>
               <div className="w-full lg:w-1/5 px-2 my-2 text-center">
-              <img src="/Bandidohh-removebg-preview.png" width={140} height={300} />
+              <img src="/Bandidohh_2-removebg-preview.png" width={140} height={300} />
 
               </div>
 

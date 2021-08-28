@@ -1229,6 +1229,10 @@ video {
   margin-top: -1.5rem;
 }
 
+.-mt-8 {
+  margin-top: -2rem;
+}
+
 .-ml-px {
   margin-left: -1px;
 }
@@ -1392,10 +1396,6 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pt-12 {
-  padding-top: 3rem;
 }
 
 .pr-12 {
@@ -2063,6 +2063,10 @@ video {
   width:35rem;
 }
 
+.navh{
+  height: 11vh!important;
+}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
@@ -2307,10 +2311,6 @@ input:focus ~ label,
     height: 2rem;
   }
 
-  .sm\:-mt-8 {
-    margin-top: -2rem;
-  }
-
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2429,6 +2429,10 @@ input:focus ~ label,
     margin-right: auto;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2517,6 +2521,10 @@ input:focus ~ label,
     padding-left: 8rem;
   }
 
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:top-16 {
     top: 4rem;
   }
@@ -2570,7 +2578,7 @@ input:focus ~ label,
   }
 
   .md\:w-2\/6 {
-    width: 30.333333%;
+    width: 31.333333%;
   }
 
   .md\:w-3\/0 {
@@ -2626,11 +2634,6 @@ input:focus ~ label,
 
   .lg\:max-w-full {
     max-width: 100%;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .lg\:w-48 {

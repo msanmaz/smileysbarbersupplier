@@ -24,7 +24,7 @@ export default function Hero() {
     };
 
     return (
-            <div className="relative pt-20 pb-20 bghero bgcontainer rounded-md">
+            <div className="relative pt-20 pb-20 bghero bgcontainer rounded-3xl md:rounded-none">
                 <div className="absolute w-full h-full bg-center bg-cover"
              >
 

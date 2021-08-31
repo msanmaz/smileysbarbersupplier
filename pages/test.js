@@ -1,37 +1,10 @@
-import { loadDB } from '../../../../config/firebase'
-import Layout from '../../../../layout/layout'
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
+import React from 'react'
 import Link from 'next/link'
-import Product from '../../../../components/Product'
-const BandidoProd = (props) => {
-    const [products, setProducts] = useState();
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-
-        let firebase = loadDB();
-        firebase.firestore()
-            .collection("hair")
-            .onSnapshot(snap => {
-                const desc = snap.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                setProducts(desc);
-                setLoading(false)
-            });
-
-
-    }, []);
-
-
-
-
+const test = () => {
     return (
-        <div className="md:px-8 px-auto w-full">
 <div class="bg-white">
-  <div class="pt-24">
+  <div class="pt-6">
     <nav aria-label="Breadcrumb">
       <ol role="list" class="max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8">
         <li>
@@ -63,8 +36,8 @@ const BandidoProd = (props) => {
     </nav>
 
     <div class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
-    <div class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4 pt-8">
-        <img src={props.img} alt="Model wearing plain white basic tee." class="w-full h-2/3 object-center object-cover"/>
+    <div class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
+        <img src="https://firebasestorage.googleapis.com/v0/b/smileysbarber.appspot.com/o/bandidopowderwax.jpeg?alt=media&token=cc383b74-328e-4529-863e-50f612529aa4" alt="Model wearing plain white basic tee." class="w-full h-2/4 object-center object-cover"/>
       </div>
      
       <div class=" aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
@@ -155,7 +128,7 @@ const BandidoProd = (props) => {
           </div>
         </div>
 
-        {/* <div class="mt-10">
+        <div class="mt-10">
           <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
 
           <div class="mt-4">
@@ -169,15 +142,15 @@ const BandidoProd = (props) => {
               <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span></li>
             </ul>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div class="mt-10">
+        <div class="mt-10">
           <h2 class="text-sm font-medium text-gray-900">Details</h2>
 
           <div class="mt-4 space-y-6">
             <p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
       </div>
@@ -189,99 +162,7 @@ const BandidoProd = (props) => {
 
   </div>
 </div>
-
-
-
-
-
-                <div className="flex flex-wrap w-full">
-                    <div className="font-semibold flex justify-center text-3xl h-10 w-full">
-                        Related Products
-                    </div>
-                </div>
-                    {loading ? "Loading Component Will be gone in 2 sec" :
-                        <div className="flex flex-wrap md:px-4">
-                            {products.slice(1,7).map(product =>
-                                <Link href="/products/[id]" as={'/products/' + product.id}>
-                                    <div className="w-1/2 md:w-1/7 py-4 px-4">
-                                        <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
-
-                                    </div>
-
-                                </Link>
-                            )}
-
-                        </div>
-                    }
-
-
-
-                
-
-        </div>
     )
-
 }
 
-
-
-export async function getStaticPaths() {
-    let result = await new Promise((resolve, reject) => {
-        loadDB().firestore()
-            .collection('hair')
-            .get()
-            .then(snapshot => {
-                let data = []
-                snapshot.forEach((doc) => {
-                    data.push(
-                        Object.assign({
-                            id: doc.id
-                        }, doc.data())
-                    )
-                })
-                resolve(data)
-            })
-            .catch(error => {
-                reject([])
-            })
-    })
-    return {
-        paths:
-            result.map(character => {
-                return {
-                    params: {
-                        id: character.id,
-                    }
-
-                }
-            }),
-        fallback: false
-    }
-}
-
-
-export const getStaticProps = async ({ params }) => {
-    const content = {}
-    await loadDB().firestore()
-        .collection('hair')
-        .doc(params.id)
-        .get()
-        .then(result => {
-            content['id'] = params.id;
-            content['img'] = result.data().img;
-            content['name'] = result.data().name;
-            content['route'] = result.data().route;
-            content['brand'] = result.data().brand;
-            content['type'] = result.data().type;
-            content['desc'] = result.data().desc;
-            content['cat'] = result.data().cat;
-            content['volume'] = result.data().volume;
-        });
-
-    return {
-        props: JSON.parse(JSON.stringify(content))
-
-    }
-}
-BandidoProd.Layout = Layout
-export default BandidoProd
+export default test

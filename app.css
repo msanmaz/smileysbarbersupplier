@@ -73,7 +73,7 @@
     }
 
     .navh{
-        height: 11vh!important;
+        height: 12.5vh!important;
       }
 
 
@@ -96,7 +96,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
 .bgcontainer{
-    min-height: 85vh!important;
+    min-height: 72vh!important;
   }
 
 
@@ -114,6 +114,11 @@ and (orientation: portrait) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+
+    .navh{
+        height: 9.5vh!important;
+      }
+
 }
 
 /* Landscape */
@@ -164,6 +169,10 @@ and (orientation: portrait) {
         width:13rem;
     }
 
+    .navh{
+        height: 12.5vh!important;
+      }
+
 }
 
 /* Landscape */
@@ -196,6 +205,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .bgcontainer{
     min-height: 65vh!important;
   }
+
 }
 
 /* Portrait */
@@ -210,6 +220,10 @@ and (orientation: portrait) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+
+    .navh{
+        height: 9.5vh!important;
+      }
 
 
 }
@@ -226,6 +240,10 @@ and (orientation: landscape) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+
+    .navh{
+        height: 9.5vh!important;
+      }
 }
 
 

@@ -116,7 +116,7 @@ function Footer() {
                 <Link href="/brands/Barbicide"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Barbicide</p></Link>
               </li>
               <li className="mb-2">
-                <Link href="/haircare"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Hair&Care</p></Link>
+                <Link href="/brands/Bandido"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Bandido</p></Link>
               </li>
 
 

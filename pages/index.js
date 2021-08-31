@@ -42,7 +42,7 @@ export default function Home() {
     <div>
       <Hero />
 
-            <div className="flex flex-row mt-2 md:pl-32 md:pr-28">
+            <div className="flex flex-row mt-12 md:pl-32 md:pr-28">
               <div className="w-full lg:w-1/5 px-2 my-2 text-center">
                 <img
                   src="/andis.jpeg"
@@ -90,10 +90,10 @@ export default function Home() {
 
       </div>
       {loading ? "Loading Component Will be gone in 2 sec" :
-        <div className="flex flex-wrap px-4">
+        <div className="flex flex-wrap px-2">
           {products.map((product,index) =>
             <Link href="/products/[id]" as={'/products/' + product.id} key={index}>
-              <div className="w-1/2 md:w-1/7 py-4 px-4">
+              <div className="w-1/2 md:w-1/7 py-4 px-2">
                 <Product  brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
               </div>

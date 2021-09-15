@@ -42,34 +42,29 @@ export default function Home() {
     <div>
       <Hero />
 
-            <div className="flex flex-row mt-12 md:pl-32 md:pr-28">
-              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+            <div className="flex flex-row mt-12 md:px-28">
+              <div className="w-full lg:w-1/4 px-2 my-2 text-center">
                 <img
                   src="/andis.jpeg"
                   alt="Client 01"
                   width={124}
-                  height={24} />
+                  height={24}
+                  className="pl-4"
+                  />
               </div>
-              <div className="w-full lg:w-1/5 px-2 my-2 text-center" >
+              <div className="w-full lg:w-1/4 px-2 my-2 text-center" >
                 <img
                   src="/Arkoamblem.png"
                   alt="Client 02"
                   width={120}
                   height={50} />
               </div>
-              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+              <div className="w-full lg:w-1/4 px-2 my-2 text-center">
               <img src="/Bandidohh_2-removebg-preview.png" width={140} height={300} />
 
               </div>
 
-              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
-                <img
-                  src="/totexamlbme.png"
-                  alt="Client 03"
-                  width={100}
-                  height={39} />
-              </div>
-              <div className="w-full lg:w-1/5 px-2 my-2 text-center">
+              <div className="w-full lg:w-1/4 px-2 my-2 text-center pl-4">
                 <img
                   src="/wahllogo.png"
                   alt="Client 04"

@@ -142,17 +142,7 @@ export default function Navbar() {
                     Bandido
                     </div>
                   </Link>
-                  <Link
-                    href={`/brands/Totex`} as={`/brands/Totex`}
-                    className={
-                      "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1  text-gray-800" 
-                    }
-                    onClick={e => e.preventDefault()}
-                  >
-                <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
-                    Totex
-                    </div>
-                  </Link>
+
                   <Link
                     href={`/brands`} as={`/brands`}
                     className={

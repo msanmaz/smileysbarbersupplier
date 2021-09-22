@@ -103,14 +103,9 @@ function Footer() {
           <div className="sm:col-span-6  md:col-span-3 lg:col-span-2">
             <h6 className="text-gray-800 font-medium mb-2 dark:text-white">Products:</h6>
             <ul className="text-sm">
-              <li className="mb-2">
-                <Link href="/brands/Totex"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Totex</p></Link>
-              </li>
+
               <li className="mb-2">
                 <Link href="/brands/Arko"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Arko</p></Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/brands/Absolute"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Absolute</p></Link>
               </li>
               <li className="mb-2">
                 <Link href="/brands/Barbicide"><p className="cursor-pointer text-gray-600 dark:text-white hover:text-gray-900 transition duration-150 ease-in-out">Barbicide</p></Link>

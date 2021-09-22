@@ -160,7 +160,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-                <Dropdown category={`Hair&Care`}  cat1="Hair Spray" cat1url="hairspray" cat2="Hair Wax" cat2url="hairwax" cat3="Serum" cat3url="serum" cat4="Shampoo" cat4url="shampoo"  cat5="Gum Gel" cat5url="gumgel"  cat6="Conditioner Spray" cat6url="conditioner" cat7="All Hair&Care" url={`haircare`} />
+                <Dropdown category={`Hair&Care`}  cat1="Hair Spray" cat1url="hairspray" cat2="Hair Wax" cat2url="hairwax" cat3="Pomade Wax" cat3url="pomadewax" cat4="Shampoo" cat4url="shampoo"  cat5="Gum Gel" cat5url="gumgel"  cat6="All Hair & Care" cat6url="conditioner" cat7="All Hair&Care" url={`haircare`} />
                 <Dropdown category={`Beard&Shave`}  cat1="Razors" cat1url="razors" cat2="After Shave" cat2url="aftershave" cat3="Beard Oil" cat3url="beardoil" url="beardandshave" />
                 <Dropdown category={`Barbering`} cat1="Electrical" cat1url="electrical" cat2="Scissors" cat2url="scissors" cat3="Aprons" cat3url="aprons"  cat4="Hygiene" cat4url="hygiene" url="barbering" />
 

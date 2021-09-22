@@ -9,6 +9,11 @@
     @apply transition duration-500 ease-in-out transform;
 }
 
+.bgcontainer{
+    min-height: 77vh;
+  }
+
+
 .ff{
     font-family: 'Montserrat', sans-serif!important;
 }
@@ -95,9 +100,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-top:3.5rem;
     }
 
-.bgcontainer{
-    min-height: 72vh!important;
-  }
 
 
 }
@@ -140,8 +142,8 @@ and (orientation: landscape) {
 
 /* Portrait and Landscape */
 @media only screen 
-and (min-device-width: 414px) 
-and (max-device-width: 736px) 
+and (device-width: 414px) 
+and (device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3) { 
     .react-autosuggest__input{
         width:13rem;
@@ -152,7 +154,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
 .bgcontainer{
-    min-height: 85vh;
+    min-height: 65vh !important;
   }
 }
 
@@ -193,18 +195,19 @@ and (orientation: landscape) {
 
 /* Portrait and Landscape */
 @media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) { 
+and (device-width: 375px) 
+and (device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 2) { 
     .react-autosuggest__input{
         width:13rem;
     }
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+
     .bgcontainer{
-    min-height: 65vh!important;
-  }
+        min-height: 61vh!important;
+      }
 
 }
 
@@ -248,9 +251,6 @@ and (orientation: landscape) {
 
 
 
-.bgcontainer{
-    min-height: 77vh;
-  }
 
   .bghero{
 background: rgb(114,103,121);
@@ -292,3 +292,5 @@ background: linear-gradient(90deg, rgb(159,115,55) 29%, rgb(240,228,149) 95%);
         color: rgba(0, 0, 0, var(--tw-text-opacity));
         left: 0px;
       }
+
+

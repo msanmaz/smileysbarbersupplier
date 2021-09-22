@@ -2191,10 +2191,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .isix{
     margin-top:3.5rem;
   }
-
-  .bgcontainer{
-    min-height: 72vh!important;
-  }
 }
 
 /* Portrait */
@@ -2238,8 +2234,8 @@ and (orientation: landscape) {
 /* Portrait and Landscape */
 
 @media only screen 
-and (min-device-width: 414px) 
-and (max-device-width: 736px) 
+and (device-width: 414px) 
+and (device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3) {
   .react-autosuggest__input{
     width:13rem;
@@ -2250,7 +2246,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
   }
 
   .bgcontainer{
-    min-height: 85vh;
+    min-height: 65vh !important;
   }
 }
 
@@ -2295,9 +2291,9 @@ and (orientation: landscape) {
 /* Portrait and Landscape */
 
 @media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) {
+and (device-width: 375px) 
+and (device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 2) {
   .react-autosuggest__input{
     width:13rem;
   }
@@ -2307,7 +2303,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
   }
 
   .bgcontainer{
-    min-height: 65vh!important;
+    min-height: 61vh!important;
   }
 }
 
@@ -2881,3 +2877,5 @@ input:focus ~ label,
 
 @media (min-width: 1536px) {
 }
+
+

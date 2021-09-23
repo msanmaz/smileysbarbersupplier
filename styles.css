@@ -2250,7 +2250,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
   }
 
   .bgcontainer{
-    min-height: 61vh!important;
+    min-height: 60vh!important;
   }
 }
 
@@ -2429,6 +2429,17 @@ input:focus ~ label,
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity));
   left: 0px;
+}
+
+/* 1792x828px at 326ppi */
+
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2) {
+  .bgcontainer{
+    min-height: 53vh!important;
+  }
 }
 
 @media (min-width: 640px) {
@@ -2889,5 +2900,3 @@ input:focus ~ label,
 
 @media (min-width: 1536px) {
 }
-
-

@@ -302,3 +302,14 @@ background: linear-gradient(90deg, rgb(159,115,55) 29%, rgb(240,228,149) 95%);
       }
 
 
+
+      /* 1792x828px at 326ppi */
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2) { 
+    .bgcontainer{
+        min-height: 53vh!important;
+      }
+
+}

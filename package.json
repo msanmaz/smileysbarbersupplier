@@ -34,6 +34,7 @@
     "react-autosuggest": "^10.1.0",
     "react-dom": "17.0.1",
     "react-fade-in": "^2.0.1",
+    "react-google-maps": "^9.4.5",
     "react-icons": "^4.2.0",
     "react-instantsearch-dom": "^6.10.3",
     "react-multi-carousel": "^2.6.2"

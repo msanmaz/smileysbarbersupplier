@@ -84,7 +84,6 @@ const HairProducts = (props) => {
 
                             <div className="flex flex-nowrap md:flex-wrap justify-between mt-2 md:mt-10 w-full md:w-1/2">
 
-                                <div className="px-4 my-2 text-xl">€ --,--</div>
                                 <div className="md:pr-20 my-2 px-4 font-light"> In Stock</div>
 
                             </div>

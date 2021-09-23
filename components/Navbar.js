@@ -27,11 +27,12 @@ export default function Navbar() {
     return (
         <div className="fixed z-50 w-full">
             <div className={` w-full md:px-6 px-0 flex items-center navh bg-black`}>
-                <div className="flex my-4">
-                    <Link href="/">
+              <Link href="/">
+              <div className="flex my-4">
             <img src="/logosbs1.2.png" className="cursor-pointer fixed h-32 -top-8 -left-4 md:-left-0"/>
-                    </Link>
                 </div>
+              </Link>
+
 
                 <div className="justify-center md:mt-0 relative md:mx-auto text-gray-600 md:flex pl-24 md:pl-0">
                     <SearchBar/>
@@ -144,6 +145,19 @@ export default function Navbar() {
                   </Link>
 
                   <Link
+                    href={`/brands/Wahl`} as={`/brands/Wahl`}
+                    className={
+                      "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1  text-gray-800" 
+                    }
+                    onClick={e => e.preventDefault()}
+                  >
+                <div className="hover:text-green-500 cursor-pointer md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800 animate1 hover:shadow-lg">
+                    Wahl
+                    </div>
+                  </Link>
+     
+
+                  <Link
                     href={`/brands`} as={`/brands`}
                     className={
                       "md:text-sm text-xs py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent hover:shadow-lg animate1  text-gray-800" 
@@ -154,13 +168,14 @@ export default function Navbar() {
                     All Brands
                     </div>
                   </Link>
+                  
      
   
                 </div>
               </div>
             </div>
           </div>
-                <Dropdown category={`Hair&Care`}  cat1="Hair Spray" cat1url="hairspray" cat2="Hair Wax" cat2url="hairwax" cat3="Pomade Wax" cat3url="pomadewax" cat4="Shampoo" cat4url="shampoo"  cat5="Gum Gel" cat5url="gumgel"  cat6="All Hair & Care" cat6url="conditioner" cat7="All Hair&Care" url={`haircare`} />
+                <Dropdown category={`Hair&Care`}  cat1="Hair Spray" cat1url="hairspray" cat2="Hair Wax" cat2url="hairwax" cat3="Pomade Wax" cat3url="pomadewax" cat4="Shampoo" cat4url="shampoo"  cat5="Hair Gel" cat5url="hairgel"  cat6="All Hair & Care" cat6url="conditioner" cat7="All Hair&Care" url={`haircare`} />
                 <Dropdown category={`Beard&Shave`}  cat1="Razors" cat1url="razors" cat2="After Shave" cat2url="aftershave" cat3="Beard Oil" cat3url="beardoil" url="beardandshave" />
                 <Dropdown category={`Barbering`} cat1="Electrical" cat1url="electrical" cat2="Scissors" cat2url="scissors" cat3="Aprons" cat3url="aprons"  cat4="Hygiene" cat4url="hygiene" url="barbering" />
 

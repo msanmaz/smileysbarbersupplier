@@ -154,7 +154,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
 .bgcontainer{
-    min-height: 65vh !important;
+    min-height: 60vh!important;
   }
 }
 
@@ -189,6 +189,9 @@ and (orientation: landscape) {
     .react-autosuggest__suggestions-container{
         width:13rem;
     }
+    .bgcontainer{
+        min-height: 61vh!important;
+      }
 }
 
 /* ----------- iPhone X ----------- */
@@ -208,7 +211,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .bgcontainer{
         min-height: 61vh!important;
       }
-
+      .bgcontainer{
+        min-height: 61vh!important;
+      }
 }
 
 /* Portrait */
@@ -226,6 +231,9 @@ and (orientation: portrait) {
 
     .navh{
         height: 9.5vh!important;
+      }
+      .bgcontainer{
+        min-height: 61vh!important;
       }
 
 

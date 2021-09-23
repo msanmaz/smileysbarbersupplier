@@ -7,10 +7,7 @@ import Product from '../../../../components/Product'
 const HairProducts = (props) => {
     const [products, setProducts] = useState();
     const [loading, setLoading] = useState(true);
-    const max = 15;
-    const min = 10;
-    const rando = Math.floor(Math.random() * max) + 1;
-    const rand = Math.floor(Math.random() * min) + 1;
+
     useEffect(() => {
 
         let firebase = loadDB();
@@ -51,7 +48,7 @@ const HairProducts = (props) => {
                         <div className="md:my-24 my-4">
 
                             <div className="w-full">
-                                <Link href={`/beardandshave/${props.route}`} as={`/beardandshave/${props.route}`}>
+                                <Link href={`/brands/${props.brand}`} as={`/brands/${props.brand}`}>
                                     <div
                                         class="p-4 md:pt-20 pt-32 cursor-pointer w-full">
                                         <h3 class="text-lg font-semibold inline-flex">
@@ -85,10 +82,11 @@ const HairProducts = (props) => {
 
                             <div className="flex flex-nowrap md:flex-wrap justify-between mt-2 md:mt-10 w-full md:w-1/2">
 
+                                <div className="px-4 my-2 text-xl">€ --,--</div>
                                 <div className="md:pr-20 my-2 px-4 font-light"> In Stock</div>
 
                             </div>
-             
+
 
 
                             <div className="py-12 space-y-4">
@@ -102,6 +100,7 @@ const HairProducts = (props) => {
                                     <div className="font-light px-4">
                                         {props.desc}
                                     </div>
+
 
 
 
@@ -130,7 +129,7 @@ const HairProducts = (props) => {
                 </div>
                     {loading ? "Loading Component Will be gone in 2 sec" :
                         <div className="flex flex-wrap md:px-4">
-                            {products.slice(rando,rand).map(product =>
+                            {products.slice(1,7).map(product =>
                                 <Link href="/products/[id]" as={'/products/' + product.id}>
                                     <div className="w-1/2 md:w-1/7 py-4 px-4">
                                         <Product brand={product.brand} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />

@@ -103,7 +103,7 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                                <Button buttons={["All", "Absolute", "Arko", "Barbicide","Bandido" , "Permasharp"]} doSomethingAfterClick={printButtonLabel} />
+                                                <Button buttons={["All", "Arko", "Barbicide","Bandido" , "Permasharp"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>
@@ -113,7 +113,7 @@ export const HairCare = (props) => {
                                     {!products || aim =='All'  ?
                                         <div className="flex flex-wrap mt-20 w-full">
                                             {props.plainData.map(product =>
-                                                <Link href={`/brands/${product.route}/${product.id}`} as={`/brands/${product.route}/${product.id}`}>
+                                                <Link href={`/products/${product.id}`} as={`/products/${product.id}`}>
                               <div className={`md:w-1/4 w-1/2 px-4 py-4 ` }>
                                                     <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 
@@ -126,7 +126,7 @@ export const HairCare = (props) => {
                                                 :
                                     <div className="flex flex-wrap mt-20 w-full">
                                         {products.map(product =>
-                                                <Link href={`/brands/${product.route}/${product.id}`} as={`/brands/${product.route}/${product.id}`}>
+                                                <Link href={`/products/${product.id}`} as={`/products/${product.id}`}>
                                                  <div className={`md:w-1/4 w-1/2 px-4 py-4 ` }>
                                                     <Product brand={product.brand} key={product.id} numReviews={2} rating={5} id={product.id} image={product.img} name={product.name} description={product.desc} />
 

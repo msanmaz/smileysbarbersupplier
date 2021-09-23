@@ -7,7 +7,7 @@ import { loadDB } from '../../config/firebase'
 
 
 export const HairCare = (props) => {
-
+    console.log(props)
 
     const printButtonLabel = (event) => {
         setAim(event.target.name)
@@ -15,9 +15,8 @@ export const HairCare = (props) => {
     const [aim, setAim] = useState(`All`)
     const [loading, setLoading] = useState(true);
     const [products,setProducts]=useState()
-
     useEffect(() => {
-        setTimeout(() => {
+    
             if(aim){
                 let firebase = loadDB().firestore().collection("hair")
                 firebase.where('cat', '==', `${aim}`)
@@ -31,7 +30,7 @@ export const HairCare = (props) => {
                     });
             }
 
-        }, 300)
+   
 
     }, [aim]);
 
@@ -100,14 +99,14 @@ export const HairCare = (props) => {
                                         <div className="flex w-full" data-aos-id-blocks>
 
                                         <div className="md:px-1 px-auto space-y-2 space-x-2">
-                                                <Button buttons={["All", "Hair Wax", "Hair Spray","Pomade Wax",  "Gel", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
+                                                <Button buttons={["All", "Hair Wax", "Hair Spray","Pomade Wax",  "Hair Gel", "Conditioner", "Shampoo"]} doSomethingAfterClick={printButtonLabel} />
                                             </div>
 
                                         </div>
                                     </div>
 
 
-                                    {!products || aim =='All'  ?
+                                    { aim =='All'  ?
                                         <div className="flex flex-wrap mt-20 w-full">
                                             {props.plainData.map(product =>
                                                 <Link href={`/haircare/${product.route}/${product.id}`} as={`/haircare/${product.route}/${product.id}`}>

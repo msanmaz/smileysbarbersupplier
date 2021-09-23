@@ -1,8 +1,33 @@
 import React from 'react'
 import Layout from '../layout/layout'
+import {
+    withScriptjs,
+    withGoogleMap,
+    GoogleMap,
+    Marker
+} from "react-google-maps";
 
 
 const Contact = () => {
+
+    const defaultCenter = { lat: 40.969610744563276, lng: 28.799800872802734 };
+
+    const defaultOptions = { scrollwheel: false };
+
+    const RegularMap = withScriptjs(
+        withGoogleMap(props => (
+            <GoogleMap
+                defaultZoom={15}
+                defaultCenter={defaultCenter}
+                defaultOptions={defaultOptions}
+            >
+                <Marker position={defaultCenter} />
+            </GoogleMap>
+        ))
+    );
+    const loadingElementStyle = { height: '100%' };
+    const containerElementStyle = { height: '280px' };
+    const mapElementStyle = { height: '100%' };
     return (
         <>
             <div className="max-w-full md:px-8 px-auto bg-gray-100 pt-40">
@@ -151,6 +176,18 @@ const Contact = () => {
 
 
             </div>
+
+        <div className="px-12">
+
+        <RegularMap
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcNnpJghWr5vggyclkMum-QmOGB-QRQNk"
+                    loadingElement={<div style={loadingElementStyle} />}
+                    containerElement={<div style={containerElementStyle} />}
+                    mapElement={<div style={mapElementStyle}
+                    />}
+                />
+        </div>
+
 
         </>
     )

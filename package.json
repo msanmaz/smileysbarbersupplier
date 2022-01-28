@@ -22,7 +22,7 @@
     "classnames": "^2.2.6",
     "concurrently": "^6.0.0",
     "cross-env": "^7.0.3",
-    "firebase": "^8.4.1",
+    "firebase": "^9.6.5",
     "google-map-react": "^2.1.10",
     "instantsearch.css": "^7.4.5",
     "next": "10.0.8",
